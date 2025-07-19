@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>EMPLOYEE DETAILS</title>
+</head>
+<body bgcolor="grey">
+    <form name="input" action="#">
+    <fieldset>
+        <p>
+            <label for = "name">First Name:</label>
+            <input type="text" name="name" required maxlength="50"/>
+        </p>
+        <p>
+            <label for = "name">Last Name:</label>
+            <input type="text" name="name" required maxlength="50"/>
+        </p>
+        <p>
+            <input type="radio" id="Male" name="gender" value="Male"/>
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" name="gender" value="Female"/>
+            <label for="Female">Female</label><br>
+        </p>
+        <p>
+            <label for="Employee Id">Employee Id</label>
+            <input type="text" name="Employee Id" required minlength="7" maxlength="7"/>
+        </p>
+        <p>
+            <label for="Designation">Designation</label>
+            <input type="text" name="Designation" required maxlength="50"/>
+        </p>
+        <p>
+            <label for="Phone number">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}">
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </p>
+    </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+Software project:Enterprise level application
+	e-com
+	banking
+	Assessment system
+	Food delivery system
+	Ride share system
+
+UML 
+
+Use case diagram:
+	UML or Unified Modelling Language, is a standardized, general-purpose visual modeling language design for specifying, visualizing, constructing, and documenting the artifacts of software systems.
+
+
+Use case : Task done by the actor.(represented in an oval)
+	
+	Employee: SubmitAssessment Login UpdateAnswers MoveNext MovePrev SignUp
+	Admin: ScheduleExam 
+	Instructor: CheckAnswer
+Actor : who is doing the task?
+
+Hands on:
+	1.Define your project with actor and use case
+	2.Design minimum 3 actors and 20use cases
+e com online shopping 
+
+
+UML CLASS DIAGRAM:
+A UML class diagram is a visual tool that represents the structure of a system by showing its classes, attributes, methods, and the relationships between them. It helps everyone involved in a project—like developers and designers—understand how the system is organized and how its components interact.
+
+

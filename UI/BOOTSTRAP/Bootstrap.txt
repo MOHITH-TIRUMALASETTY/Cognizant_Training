@@ -1,0 +1,12 @@
+BOOTSTRAP:
+	It is a framework or pattern
+	reusability
+	twitter bootstrap officially released as opensource in 2011
+	Mark Otto and Jacob created Bootstrap
+
+
+Why Bootstrap?
+	A.Mobile first approach
+	B.support all browsers
+	C.easy to get started
+	D.responsive design - bootstrap responsive css can adjust

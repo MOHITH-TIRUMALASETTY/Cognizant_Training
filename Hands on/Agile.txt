@@ -1,0 +1,233 @@
+
+Software project:Enterprise level application
+	e-com
+	banking
+	Assessment system
+	Food delivery system
+	Ride share system
+
+SDLC 
+
+
+UML 
+
+Use case diagram:
+	UML or Unified Modelling Language, is a standardized, general-purpose visual modeling language design for specifying, visualizing, constructing, and documenting the artifacts of software systems.
+
+
+Use case : Task done by the actor.(represented in an oval)
+	
+	Employee: SubmitAssessment Login UpdateAnswers MoveNext MovePrev SignUp
+	Admin: ScheduleExam 
+	Instructor: CheckAnswer
+Actor : who is doing the task?
+
+Hands on:
+	1.Define your project with actor and use case
+	2.Design minimum 3 actors and 20use cases
+
+Software Design
+SDLC : 3/4 months
+Agile:2-4 weeks
+	It is an itterative and incremental model.
+	itterative- same process is repeating again and again i.e; getting the requirement , design, coding again and again same process again and again.
+	incremental- we have implemented some features in the beginning and keep on adding new features with existing software.
+	
+Agile principle:
+	customer no need to wait until all the features is done.
+	we release 10 features in each release.
+	we can accomodate the requirements from the customer.
+
+Communication:
+	Good communication between customer , dev , tester, business analyst.
+
+Scrum:
+	agile is a process model.
+	scrum is a framework
+Devops:immediately
+
+Scrum terminology:
+	user story: feature or module in a software
+	epic: collection of user stories
+	product backlog: it is a doc or excel contains list of user stories prepared by product owner
+	sprint/iteration: period of time to complete user stories.(develop, design, test etc...)
+			  min 2 weeks max 4 weeks
+	sprint planning meeting: meeting in the team and decided what are the features and created, developed and delivered to customer
+	product backlog: list of commited stories by dev/QA for specific sprint
+			 for every sprint the sprint baclog will change
+	scrum meeting: meeting conducted by scrum master every day 15 min
+		       called scrum call/standing meetings
+				3 questions:
+					what did u do yesterday?
+					what will u do today?
+					are there any impediments in your way?
+	sprint retrospective meeting: end of the sprint one meeting
+				      what went wrong, what went right, any other things you want to do next?
+	story point: during sprint planning meeting every dev and tester will identify their story points
+		     estimation is done in the form of story points
+		     ex dev say they need some time to develop the sprint, tester say they need some time to define test cases in the sprint
+				ex 1 story point = 1 hr / 1 day depends on company
+				
+
+	burndown chart: graph created by scrum master 
+
+Agile values:
+	1.Individuals and interactions over processes and tools
+		focus on colloborating and effective communication within a teams rather than relying heavily on tools and rigid processes.
+	2.Working software over comprehensive documentation
+	3.customer colloboration over contract negotiation
+	4.Responding to change over following plan
+
+Agile principles:
+	1.Customer satisfaction through early and continuous delivery.
+	2.Welcome changing requirements, even late in development.
+	3.Delivery working software regularly.
+	4.Close, daily cooporation between business peopke and developers.
+	5.Build projects over motivated individuals.
+	6.Face-to-Face conversations is the most effective communication method.
+	7.Working software is the primary measure of progress.
+	8.Sustainable development phase.
+	9.Continuous attention to technical excellence and good design.
+	10.Simplicity .
+	11.Self-organizing teams encourage great architectures, requirements, and designs.
+	12.Regular reflections on how to become more effective.
+
+
+Agile VS Waterfall model:
+When to use agile?
+	when requirements are expected to evolve
+
+when to use waterfall?
+	when requirements are fixed and well-understood
+
+
+How to write effective user stories?
+	A user story is short, simple description of a feature or functionality told from the perspective of the end user.
+	It focuses on what the user wants to acheive and why, rather than how to build it.
+
+#USER STORY FORMAT (INVEST model)
+Standard Format:
+	As a [User role],
+	I want [goal or feature],
+	So that [benifit or reason].
+
+Example:
+	As a student,
+	I want to receive email remainders for assignment deadlines,
+	so that i can submit on time.
+
+
+
+INVEST PRINCIPLES:
+INDEPENDENT:
+	Should be self contained. should not have any dependency on other user story.
+NEGOTIABLE:
+	Not a strict contract, open for discussion.
+VALUABLE:
+	Delivers clear value to the user.
+ESTIMABLE:
+	Team should be able yo estimate the effort.
+SMALL:
+	Manageble and completable within a sprint.
+TESTABLE:
+	Clear enough to validate through testing(should have necessary information to validate).
+
+
+###Best practices for writing user stories.####
+Focus on one specific user goal per story.
+Avoid technical details, keep it user friendly.
+Keep stories concise yet clear.
+Ensure the story can be tested and validated.
+Colloborate with customers or product owners for clarity.
+
+
+------------E-Commerce website----------------
+As a customer,
+I want to sign up and log in securely,
+So that I can access features and track my orders.
+
+As a registered user,
+I want to add products to a wishlist,
+So that I can save items to purchase later without searching again.
+
+As a user,
+I want to add items to my shopping cart and proceed to checkout,
+So that I can purchase multiple products in a single transaction.
+
+As a buyer,
+I want to receive email and SMS notifications for order updates,
+So that I stay informed about shipping and delivery status.
+
+As an admin,
+I want to analyze sales data and customer behavior,
+So that I can optimize inventory and improve marketing strategies.
+
+
+-------Writting acceptance criteria for user stories-------
+Acceptance criteria define the conditions that must be met for a user story to be considered complete and working as intended.
+
+Characterstics of a good acceptance criyteria:
+	clear, specific, and measurable
+
+Testable (cab be validated through manual or automated tests).
+Focused on user behaviour and business rules.
+
+
+
+Common formats of Acceptance Criteria:
+	1:Given/When/Then Format:
+		Given[Contex]
+	  	Then[Action]
+	  	When[Expected outcome]
+
+
+		Example:user story- As an online shopper, i want to add items to a wishlish so that i can purchase them later.
+			Given [i am logged into my account]
+			when [i click "Add to wishlist" on a product]
+			then [the product should appear in my wishlist]
+
+	2.Bullet point list format:
+		Email remainder 
+
+
+Key agile metrics: Agile metrics helps teams track progress, predict delivery, and improve performance.
+		   Two of the most commonly used metrics are velocity and burndown charts.
+
+	1.Velocity:
+		what it measures?
+		The amount of work(usually in story points) completed by a team in a single sprint.
+
+		why it's useful:
+		Helps in predicting future sprint capacity
+		Supports release planning
+		identifies productivity trends
+
+		Example:
+			If a team completes 40 story points in sprint 1 and 42 in sprint 2, their average velocity is 41 points.
+
+	2.Burndown chart:
+		what it measures?
+		Shows remaining work versus time within a sprint or project
+
+		How it works:
+			X-axis = Time(eg., sprint days)
+			Y-axis = Remaining work(eg., story points or tasks)
+
+
+
+
+
+
+
+
+
+		
+		
+
+
+
+
+
+
+
+

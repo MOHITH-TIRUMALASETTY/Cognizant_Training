@@ -1,0 +1,36 @@
+CSS
+
+Introduction to CSS:
+	CSS stands for Cascading Style Sheets
+	selector ---> tags (for which element we are going to style is known as selector)
+	declaration ---> property : value
+
+
+
+
+Styles and StyleSheets:
+	There are two types of selectors : id and class.
+	webpage that use selector id
+	css id selector is used 
+	
+
+	STYLE SHEETS:
+		1.External style sheet ---> define css inside a external .css file.
+		2.Internal style sheet ---> define using the same html file
+		3.Inline style sheet ---> we define the style inside the attribute
+Formatting with CSS:
+	CSS-Background:
+		background-color
+		background-image
+		background-repeat
+		background-position
+	CSS-Text formatting:
+		color
+		alignment
+		decoration 
+		ransformation
+		indentation
+Links and Lists:
+	
+CSS Model Box:
+CSS3 Features:

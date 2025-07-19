@@ -1,0 +1,900 @@
+JAVA
+
+Discovery:
+	1990s
+	james gosling -- team leader at sun labouratories -- working on a project related to vcr 
+	patrick naughton
+	chris warth 
+	ed frank &
+	frank sheriden 
+	first named as OAK 
+	
+
+Versions:
+	JAVA DEVELOPMENT KIT
+	1995 - OAK + WEB > JAVA 1.0
+                           JAVA 2.0
+                           JAVA 3.0
+                           JAVA 4.0 (TILL THIS JAVA 2)
+                           JAVA 5.0 > JAVA 5 (TIGER EDITION OF JAVA)
+                           ............ JAVA 11 (2018)
+
+
+Flavours of java:
+	1.J2SE --- CORE JAVA
+	2.J2EE --- WEB
+	3.J2ME --- MOBILE, ANDROID, ADF FACES, RICH FACES 
+
+
+
+
+Buzz words:
+	used to identify technology or framework
+	object oriented
+		modularity 
+		information hiding
+		code reuse
+	distributed
+		remotely call some fuction
+		calling function from one JVM to another JVM
+	platform independent
+		JDK is platform dependent
+		java is os independent
+		compiled once but run everywhere
+		
+	secure
+	multi threaded
+	portable
+	robust
+
+JVM,JRE AND JDK
+	JDK = java development kit
+	jdk is platform independent
+	inside jdk we have jre
+
+	JRE = java runtime environment
+	it contains 
+
+Java control flow:
+	A.selection statements
+		if
+		if - else
+		switch
+	B.iterative statements
+		for 
+		while
+		do - while
+
+Data types:
+	- arithmatic operation between two short datatype return int.
+	- explicit type casting
+	1byte = 8 bit
+	byte = 1 byte
+	short = 2 byte
+	int = 4 byte
+	long = 8 byte
+	float = 4 byte
+	double = 8 byte
+        boolean = 1 bit
+	char =  
+
+Wrapper class:
+	for each data type we have Wrapper class
+	java.lang*;
+	it is used to cnvert primitive to object and rev.
+	it is used to convert string to primitive and rev.
+	Byte
+	Short
+	Integer
+	Long
+	Float
+	Double
+	Boolean
+	Character	
+	
+	Primitive ---> object
+	int a = 20;
+	Integer obj = new Integer(a);
+
+	Integer obj1 = a; //auto boxing from java 5
+
+	Object ---> Primitive 
+	int b = obj1.intValue(); //java 4
+
+	int b1 = obj1; //auto unboxing java 5
+
+
+	-Static variable value can be shared by multiple objects
+
+
+########Wrapper Class:
+
+	-For each data type we have Wrapper class
+
+	-java.lang.*;
+
+	-It is used to convert object to primitive and rev;
+
+	-It is used to convert String to primitive and rev
+
+	-It is used to convert String to primitive and rev
+
+#Constructor
+
+		1.Constructor name same as class name.
+
+		2.By defalut JVM provieds defalut constructor.
+
+		3.constructor is used to initialize attribute object.
+
+		4.If we have defalut constructor inside the class then JVM will not provide the defalut constrctor inside the class. we have to manually 		  provide it.
+
+		5.we have 2 types of constructors in java
+
+				-default
+
+				-parameterized
+
+	# this 
+
+		- It is a keyword in java
+
+		-It is used to point current object attribute.
+
+
+	#this()
+
+		-used to call constructor in the same class.
+
+		class Employee{
+
+		String empName;
+
+		String empEmail;
+
+		String empDesc;
+
+		void display(){
+
+		}
+
+		Employee(){
+
+		System.out.println("Default constructor");
+
+		}
+
+		Employee(String empName,String empEmail){
+
+		}
+
+		}
+
+		Class EmpDemo{
+
+		public static void main(String[] args){
+
+		Employee emp=new Employee();
+
+		emp.display();
+
+		}
+
+	}
+
+ 
+ 
+DAY 14/07/2025
+ 
+###########################Bean Class:
+ 
+	- Any class that have instance variable and its getters and setters is called Bean class.
+
+	- It is used to initialze object attribute
+
+	- To implement data hiding.....private variables cannot be accessed outside the object.....It is hidden....
+
+	we can access method inside the same class....we cannot access the private variables outside the class.
+
+	-
+ 
+		Class Dept{
+
+			int deptId;
+
+			String deptName;
+
+			public void setDeptID(int dId){
+
+				this.deptId=dId;
+
+			}
+
+			public int getDeptId(){
+
+				return deptId;
+
+			}
+
+			public void setDeptName(String dName){
+
+				this.deptName=dName;
+
+			}
+
+			public String getDeptName(){
+
+				return deptName;
+
+			}
+
+		}
+
+		class DeptDemo{
+
+			public static void main(String[] args){
+
+				Dept obj= new Dept();
+
+				obj.setDeptID(101);
+
+				obj.setDeptName("Admin");
+
+				System.out.println(obj.getDeptId()+"/"+obj.getDeptName());
+
+			}
+
+		}
+ 
+ 
+ 
+ 
+#################### Static Keyword:
+ 
+-static is a keyword.
+
+-static variable can be accessed using  class name if main method is outside the class.
+
+-static variable value can accessed without class name if main method is in the same class.
+
+-static variable value can be shared by mutiple object.
+ 
+ 
+################### static block:
+ 
+- If we create mutiple oject, constructor is called mutiple times but static block is called one time.
+
+-First static block is called then constructor is called.
+ 
+class ProductDemo {
+
+    ProductDemo(){
+
+        System.out.println("Default Constructor");
+
+    }
+
+    static{
+
+        System.out.println("Static block called");
+
+    }
+
+    public static void main(String[] args){
+
+        ProductDemo obj1=new ProductDemo();
+
+        ProductDemo obj2=new ProductDemo();
+
+        ProductDemo obj3=new ProductDemo();
+
+    }
+
+}
+ 
+ 
+
+
+class Main{
+    int empId=7;
+    static int deptId=8;
+    Main(){// constructor
+        empId++;
+        deptId++;
+        System.out.println("empId:"+empId+"deptId:"+deptId);
+    }
+    public static void main (String [] args){
+        Main obj=new Main();
+        Main obj1=new Main();
+        Main obj2=new Main();
+        Main obj3=new Main();
+
+    }
+}
+
+Static block:if we create multiple objects constructor is called multiple times but static block is called only 1 time.
+	     first static block willbe called then constructor is called
+
+class Main{
+    Main(){
+        System.out.println("Default constructor");
+    }
+    static{
+        System.out.println("Static block called");
+    }
+    public static void main(String[] args) {
+        Main obj=new Main();
+        Main obj1=new Main();
+        Main obj2=new Main();
+    }
+}
+
+
+User input in java:
+	2 different approach:
+		A.using BufferReader
+		B.using Scanner
+A.BufferReader: java.io 
+	Stream  
+		Binary                           
+	Reader
+		Character
+	StreamReader
+		used to convert from bin to char or char to binimport java.io.InputStreamReader;
+
+import java.io.*;
+
+class Main{
+    public static void main(String[] args )throws IOmohithException{
+        BufferedReader rd = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Enter a name");
+        String name=rd.readLine();
+        System.out.println(name);
+    }
+}
+	limitations:
+		we have to handle exception
+		we have to convert binary to character manually
+		input not be diffrentiated between data types
+		these limitations can be resolved using scanner class
+B.Scanner:
+	1.Module java.base  >  Package java.util  >  Class Scanner
+	2.from java5
+	3.we don't have to handle exception
+	4.we are not responsible to convert binary to character
+	5.
+
+OBJECT: anything that have attribute and action
+OBJECT RELATIONSHIP: 	
+	HAS A = Association or aggregation --> relationshio between two objects is called association where one object contain another object
+		eg; classroom have chair --- relationship name -> HAVE
+		    one classroom have many chair --- cardinality - 1:1, 1:m, m:n, m:1
+class Main{
+    chain obj = new chair();
+}
+	HAS A = Composition --> one object cannot exist without the other 
+		eg; Order contain OrderItem
+class Main{
+    chain obj = new chain();
+}
+
+	IS A  = Inheritance
+		-re-usuability in java
+		-multiple inheritance does not supported in java
+		-java support multiple inheritance with the concept of interface
+
+/* Inheritance ---> extends
+class Employee{
+    private int empId=101;
+    private String empName="MAX";
+    public int getEmpId(){
+        return empId;
+    }
+    public void setEmpId(int eid){
+        this.empId=eid;
+    }
+    public String getEmpName(){
+        return empName;
+    }
+    public void setEmpName(String eName){
+        this.empName=eName;
+    }
+}
+class Manager extends Employee{
+    private String desig="Admin";
+    public String getDesig(){
+        return desig;
+    }
+    public void setDesig(String desig){
+        this.desig=desig;
+    }
+}
+class Main{
+    public static void main(String[] args) {
+        Manager obj=new Manager();
+        System.out.println(obj.getEmpId()+"/"+obj.getEmpName()+"/"+obj.getDesig());
+    }
+}*/
+		vehicle
+		   |
+		  car
+
+Super:----> it is used to call base class variable and method.
+	super is keyword in java.
+	if base class and derived class have same variable name then, creating an object of derived class it is not possible to print base class variable     value.
+	base class variable value is hidden inside the derived class.
+	if variable hiding is disease then super is cure.
+
+class A{
+    int a=30;
+}
+class B extends A{
+    int a=40;
+    void show(){
+        System.out.println("a="+a+" super.a="+super.a);
+    }
+}
+class Main{
+    public static void main(String[] args) {
+        B obj =new B();
+        obj.show();
+    }
+}
+
+
+Super function:
+	it is used to call the base class constructor
+	super() must be the first statement inside the constructor
+	it is used to implement re-usability
+/* super function
+class AA{
+    int x;
+    int y;
+    AA(){
+
+    }
+    AA(int a, int b){
+        this.x=a;
+        this.y=b;
+        System.out.println("x="+x+"y="+y);
+    }
+}
+class BB extends AA{
+    int z;
+    BB(){
+
+    }
+    BB(int a,int b,int c){
+        super(a,b);
+        //this.x=a;
+        //this.y=b;
+        this.z=c;
+        System.err.println("x="+x+"y="+y+"z="+z);
+    }
+}
+class Main{
+    public static void main(String[] args) {
+        BB obj=new BB(100,200,300);
+    }
+}*/
+	
+
+HANDS ON :
+Base class : clothing
+attribute :
+1.Create 3 shirt objects using shirt parameterizes cnstructor and print all the attribute
+2.Create 3 trousers object using Trousers parameterized constructor and print te attribute
+
+class Clothing1{
+    int id,size;
+    double price;
+    char color;
+
+    Clothing1(){
+
+    }
+    Clothing1(int id,int size,double price,char color){
+        this.id=id;
+        this.size=size;
+        this.price=price;
+        this.color=color;
+    }
+    void display(){
+        System.out.println(id+" ");
+        System.out.println(size+" ");
+        System.out.println(price+" ");
+        System.out.println(color+" ");
+    }
+}
+class Clothing{
+    public static void main(String[]args){
+        Clothing1 obj=new Clothing1(101,32,1000.00,'b');
+        obj.display();
+    }
+
+}
+
+
+class Clothing1{
+    int id,size;
+    double price;
+    char color;
+
+    Clothing1(){
+
+    }
+    Clothing1(int id,int size,double price,char color){
+        this.id=id;
+        this.size=size;
+        this.price=price;
+        this.color=color;
+    }
+    void display(){
+        System.out.println(id+" ");
+        System.out.println(size+" ");
+        System.out.println(price+" ");
+        System.out.println(color+" ");
+    }
+}
+class shirt extends Clothing1{
+    
+    int fit;
+    shirt(){
+    
+    }
+    shirt(int id,int size,double price,char color,int fit){
+        super(id,size,price,color);
+        this.fit=fit;
+        System.out.println(" id= "+id+" size= "+size+" price= "+price+" color= "+color+" fit= "+fit);
+    }
+    
+}
+class trousers extends Clothing1{
+    
+    int fit;
+    String gender;
+    trousers(){
+
+    }
+    trousers(int id,int size,double price,char color,int fit,String gender){
+        super(id, size,price, color);
+        this.fit=fit;
+        this.gender=gender;
+        System.out.println("id= "+id+" size= "+size+" price= "+price+" color= "+color+" gender= "+gender+" fit= "+fit+" gender= "+gender);
+    }
+    
+}
+
+class Clothing{
+    public static void main(String[]args){
+        shirt obj1=new shirt(101,25,2000.00,'W',1);
+        shirt obj2=new shirt(102,35,3000.00,'M',2);
+        shirt obj3=new shirt(103,45,4000.00,'O',3);
+        trousers obj4=new trousers(98,38,1001.00,'B',1,"Male");
+        trousers obj5=new trousers(99,36,4561.00,'W',3,"Female");
+        trousers obj6=new trousers(100,34,6501.00,'G',2,"Male");
+    }
+
+}
+
+
+ARRAY:
+	it is used to collect similar type of elements
+	array index will always start from 0
+	array is an object
+	array creation we cannot change the length of array
+	declaration of array :int a[] =new int[5]
+			      String sh[]=new String[4]
+
+	two d array:
+			int a[][]=new int[2][2]
+
+class Shirt{
+    private int fit;
+    private int size;
+    private String color;
+    private int cost;
+    Shirt(){
+
+    }
+    Shirt(int fit, int size, String color,int cost){
+        this.fit=fit;
+        this.size=size;
+        this.color=color;
+        this.cost=cost;
+    }
+    public String toString(){
+        return fit+"/"+size+"/"+color+"/"+cost;
+    }
+}
+class ArrayDemo{
+    public static void main (String args []){
+        int a []=new int[5];
+            a[0]=1;
+            a[1]=2;
+            a[3]=3;
+            a[4]=4;
+            //a[5]=5;
+        System.out.println(a[3]);
+
+        Shirt sh[] = new Shirt[1];
+        sh[0] = new Shirt(23,34,"blue",100);
+        System.out.println(sh[0]);
+
+    }
+}
+
+
+VAR ARG ---> Variable argument ---> intoduced in java5 ---> purpose is to remove array implementation of array
+
+
+public class VarArg {
+    static void show(int x[]){
+    //static void show(int ... arr){
+        for (int i:x){
+            System.err.println(i);
+        }
+    }
+    public static void main(String[] args) {
+        int a[]={20,30,40,50,60};
+        show(a);
+    }
+}
+
+
+###16/JULY/2025###
+
+POLYMORPHISM:
+	Same person do different interaction
+	polymer   -   c   -   3    Different tasks [c,d,n]
+	same person do different task
+	Two types of polymorphism:
+			A.Function overloading or compile time polymorphism.
+			B.Function overiding or run time polymorphism.
+
+
+A.Function overloading or compile time polymorphism:
+	same function name do different task.
+	func return type can be differebt.
+	based on number of arg and type of arg one of the func get selected during compile time
+
+class CompileTimePolymorphism {
+    static int sum(int a, int b){return a+b;}
+
+    static float sum(float a, float b){return a+b;}
+
+    static float sum(float a, int b){return a+b;}
+    public static void main(String[] args) {
+        System.out.println(sum(7.0f,9.0f));
+        System.out.println(sum(99,88.0f));
+        System.out.println(sum(17,19));
+    }
+}
+
+
+API example of compile time polymorphism:
+	Constructor name is same
+
+Constructor overloading:
+	Constructor name is same
+	Based on the vonstructor arg and type of arg one of the constructor get selected during compiletime
+
+HANDS ON:
+	Write a program that use overloaded method for printing different type of array (integer,double,character)
+
+public class HandaOn10A {
+    public void printArray(int[] arr) {
+        System.out.println("Integer Array:");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public void printArray(double[] arr) {
+        System.out.println("Double Array:");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public void printArray(char[] arr) {
+        System.out.println("Character Array:");
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+         
+    HandaOn10A printer = new HandaOn10A();
+
+        int[] intArr = {1, 2, 3};
+        double[] doubleArr = {1.1, 2.2, 3.3};
+        char[] charArr = {'A', 'B', 'C'};
+
+        printer.printArray(intArr);
+        printer.printArray(doubleArr);
+        printer.printArray(charArr);
+
+    }
+}
+
+
+
+B.Function overiding or run time polymorphism:
+	same metrhod name
+	it is for multi inheritance
+	Same method signature 
+	when base class and derived class contains same function name
+	ovrridden method must have strong or equal access specifiers from base class to derived class.
+
+	Follow DMD=Dynamic method dispatch
+		  =Super class reference should point to derived class object, but the reverse is not true
+
+NOTE:
+	When an overridden method is called through a superclass reference, JAVA determines which verson of the method to called based upon the type of objectbeing referred to at the time the call occurs .
+class Shape {
+    void Area() {
+        System.out.println("Inside Shape");
+    }
+}
+
+class Circle extends Shape {
+    void Area() {
+        System.out.println("Inside circle");
+    }
+}
+
+public class RumTimePolymorphism {
+    public static void main(String[] args) {
+        Shape obj = new Circle();
+        obj.Area();
+
+    }
+}
+
+
+API example of funtion overriding:
+	toString()
+
+Any class we write by default it extends object class and it is present inside lang package
+
+
+HANDS ON 11:
+	create a base class fruit ehich has name, taste and size as its attributes.A method called eat() is created which describes the name of the fruit  and its taste. inherit the same in 2  other Apple and Orange and override the eat() method to represent each fruit taste.
+
+
+
+Final ---> Keyword:
+	It is a keyword in java
+	final class cannot be extended
+	Final variable can not be changed
+	final method cannot be overridden
+
+final class Product{
+    int prodId=1001;
+    void displayProduct(){
+
+    }
+}
+
+class Electronics extends Product{
+    void demo(){
+        prodId = 1002;
+
+    }
+}
+class Final{
+    public static void main(String [] args){
+        Electronics obj = new Electronics();
+        obj.demo();
+    }
+}
+
+
+
+Abstraction:
+	can be done using abstract class and interface
+
+Abstract class:
+	It is a keyword in java
+	We can create two types of method
+		A.Method with declaration ---> must be abstract
+		B.Method with definition
+	Any class override an abstract class must have to override all the abstract method declared inside the abstract class
+	we cannot create object of abstract class
+	
+	Limitations:
+		we can not implement multiple inheritance 
+		we can rectify by using interface
+
+Interface:
+	it is a keyboard
+	Any variable declared inside an interface public static final
+	inside interface we can only declare a method but we cannot define a method
+	interface method by default method 
+	any class implements an interface must have to override all the abstract method declared in the interface
+	we cannot declare the object inside interface
+	java class supports multiple inheritance using interface
+
+
+HANDS ON:
+Create an Interface Compartment to represent a rail coach.
+Provide an abstract function notice in this class.
+Derive Firatclass, Ladies, General, Luggage classes from the compartment class. Override the notice function in each of them to print notice suitable to the type of the compartment. Create a class TestCompartment
+Write main function to do the following:
+Declare an array of Compartment of size 10.
+Create a compartment of a type as decided by a randomly generated integer in the range 1 to 4.
+Check the polymorphic behavior of the notice method
+
+import java.util.*;
+
+interface Compartment {
+    void notice(); 
+}
+
+class FirstClass implements Compartment {
+    public void notice() {
+        System.out.println("First class");
+    }
+}
+
+class Ladies implements Compartment {
+    public void notice() {
+        System.out.println("Ladies");
+    }
+}
+
+class General implements Compartment {
+    public void notice() {
+        System.out.println("General");
+    }
+}
+
+class LuggageClasses implements Compartment {
+    public void notice() {
+        System.out.println("Luggage");
+    }
+}
+
+public class HandsOn12 {
+    public static void main(String[] args) {
+        Compartment[] C = new Compartment[10];
+        Random r = new Random();
+
+        for (int i = 0; i < C.length; i++) {
+            int T = r.nextInt(4) + 1;
+
+            if (T == 1) {
+                C[i] = new FirstClass();
+            } else if (T == 2) {
+                C[i] = new Ladies();
+            } else if (T == 3) {
+                C[i] = new General();
+            } else {
+                C[i] = new LuggageClasses();
+            }
+        }
+
+        for (int i = 0; i < C.length; i++) {
+            System.out.print("Compartment " + (i + 1) + ": ");
+            C[i].notice(); 
+        }
+    }
+}
+
+	
+
+Encapsulation :
+	
+	
+
+
+
+
+
+
+
+
