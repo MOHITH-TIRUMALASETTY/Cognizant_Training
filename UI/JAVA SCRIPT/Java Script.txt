@@ -1,0 +1,154 @@
+Java Script
+
+	HTMl - Markup 
+	CSS - Create good look and feel
+	JS/JQuery - Logic inside page
+
+
+	Java Script is used to define function in webpage
+	Task of function
+		Take input, perform action and provide output
+
+				public int getHello(int a,int b){
+						return a+b;
+				}
+	Object oriented programming language
+		oops - class, object, inheritance, polymorphism, abstarction, encapsulation
+	Developed by Netscape Corporation in 1996
+		Java    />javac    Hello.java
+			/>java     Hello            JVM (compile java)
+
+
+		JS      />Browser
+						    JS Engine (compile JS)
+	JS is used in browser
+	Js is one type of scripting language ---> light weight programming
+	Scripting language & Programming language:
+		SL - Less powerful as most of the complex logic we can not implement
+		   - Lines end with ; but use is optional
+		   - Interpreter based ---> hello.js => NC/MC
+		   - Example ---> PYTHON JAVA SCRIPT etc...
+
+			print();
+
+		PL - More powerful as most of the complex logic we can implement
+		   - Lines end with ; and use in mandatory
+		   - Compiler based ---> Hello.java => Hello class NC
+		   - Example ---> JAVA C# etc... 
+
+	<head> - is the logical part of our code 
+	<body> -
+
+	--- version 
+		ES5
+		ES6
+
+	The JavaScript naming convention started with ES1, ES2 ES3 ES4 ES5 & ES6
+	But, ECMAScript 2016 and 2017 was not called ES7 & ES8
+	Since, 2016 new versions are named by year (ECMAScript 2016/2017/2018)
+
+
+Why JavaScript implementations are available?
+	The first JS was created by Brendan Eich at Netscape
+
+	Window is a class that represents browser
+	Document is object that represent page
+	Inside window we can have multiple object ex: document
+
+	We can write html inside JS
+	html files are like exe files.we have to use <script> to include js 
+
+	JS can be written in common area or in a block
+	Block is more powerful than common area
+
+
+In Scripting variable is implicit:
+	During runtime interpreter try to understand what you have declared
+	what data type it is based on data
+In programming language variable is explicit:
+	Programmer must declare the data type in the code like : int float etc....
+
+
+Variable creation features:
+	Variable should start with alphabet
+	Variable should not contain special character
+	Variable are case sensitive 
+	Variable start with var
+
+	int a=10; // java ---> explicit
+	var b="hello" // js ---> implicit
+
+
+
+Data Types:
+	Primitive (int,float,string,boolean,undefined,null)
+	Non-Primitive datatypes(object)
+
+	<SCRIPT type ="text/javascript" language="javascript">
+	var x=60;
+	document.write("the value is "+x+"<br>");
+	var y=hello;
+	document.write("the value is "+y+"<br>");
+	</script>
+
+	String declaration using "' is same as python
+		document.write('This is "good" book');
+		document.write("This is 'good' book");
+		document.write("This is "good" book");  ---> error syntax   //ctrl+shift+j to check error 
+		document.write('This is 'good' book');  ---> error syntax
+	
+
+<noscript> 
+	Sometimes we are confused weather browser does not support JS or we have some error in the JS code
+	IE doesnot suppprt JS by default
+
+Cinditional statement:
+	
+
+Loops:
+
+
+Functions:
+	Code reusability
+	A function is a group od reusable code which can be called anywhere in your program
+	This eliminates the need of writting the same code again and again
+	It helps programmers in writtiong modular codes
+	Functions allow a programmer to divide a big problem into a number of small and manageable functions
+
+
+Event:
+
+
+Big Arrow (Fat Arrow) Functions:
+	Before this new standard, JS used the function keyword to create functions
+	Now we can use this big arrow => to write functions
+
+	/pre ES-6
+		function add(num1 , num2){
+			return(num1+num2);
+		}
+
+	/Lamda or Big Arrow
+		num 1, num 2=>num1 + num2;
+	
+
+
+Selector ---> Id Class Element
+	$()
+	element inside a parenthesis is element selector
+	id inside a parenthesis is id selector
+	class inside a parenthesis is class selector
+
+$("h1") - selector - element
+<h1> Welcome to JQuery </h1>
+
+$("pp") - selector - id
+<h1> Welcome to JQuery </h1>
+
+$("dd") - selector - class
+<h1> Welcome to JQuery </h1>
+
+
+
+
+
