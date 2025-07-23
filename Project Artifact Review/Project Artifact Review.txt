@@ -1,0 +1,90 @@
+UI Side Update
+Html5 -> CSS3 -> JavaScript -> JQuery -> Bootstrap -> Angular -> React -> ...
+MiddleTier Update
+Web Application (j2ee - servlet/jsp) :
+	-> Web Service (soap/rest Api) -> Microservice
+	-> Web server -> Application server ->Cloud  ---> this is infrastructure
+	-> Spring -> Spring Boot ---> this is framework
+
+Project Artifact Review :
+
+
+Web Application using Servlet / jsp (J2EE) :
+	---> 3 Tier Architecture
+	---> Web server and application server
+	---> Web component and Application component
+			Web component : Simple web application using servlet and jsp , html, css, js
+			Application component : Enterprise level Application (Springbc ,adfbc, ejb)
+						Features:
+							Distributed
+							Persistence
+							Web service
+							Transaction
+							Multi threading
+							Location Transparency
+	We replaced the application server and moved to cloud
+
+
+Enterprice level application ---> Cloud -(Springbc,adfc,ejb)
+
+Cloud:
+	Today everyone leverage this cloud computing.
+	Regardless of job role, industry need employees to do cloud computing
+
+What is cloud computing?
+	To run a car we need electricity, gas
+	To run a Web application we need server to run
+	To run our home we need power
+	We dont create power grid? we connect our home by the end we pay the bill
+
+	Same like the power company ,gcp aws azzure they supply the resources servers to IT companies
+	We connect to the Internet to setup the servers and it resources
+
+	Cloud computing is the delivery of different services through the internet , including data storage , servers ,databases ,networking and software
+	cloud computing will give you compute 
+
+Evolutions of cloud:
+	
+
+
+
+Servlet/jsp -> (Framework) Spring, strunts , jsf, adf, oaf -> SpringBoot
+
+Web Application using Servlet:
+	client => login.html => loginServlet.java => DB
+
+Web Application using jsp:
+	client => login.html => login.jsp => DB
+
+Web Application using jsp + MVC (Model View Controller):
+	client => login.html => loginController.jsp => LoginModel.java => DB
+		    View	     Controller		Model
+
+Till here the application was dependent 
+
+Web application using jsp + MVC + Enterprise Application:
+	client => login.html => loginController.jsp => LoginModel.java(EJB/ADFBC) => DB
+		    View	     Controller		Model
+
+Till 2003 if you want to execute the enterprice level application we have to buy a application server from vendor , so next created spring to avoid this flaws
+
+Web application using jsp + MVC + Enterprise Application: (No application server)
+	client => login.html => loginController.jsp => LoginModel.java(SpringBC) => DB
+		    View	     Controller		Model
+
+Web application using jsp + MVC + Enterprise Application: (No application server/Production grade project)
+	client => login.html => loginController.jsp => LoginModel.java(SpringBoot) => DB
+		    View	     Controller		Model
+	
+
+Distributed environment communication:
+	Remotely call some function
+	calling function from one JVM to another JVM
+			Server 1		Server 2
+			EJB			SpringBC
+			JVM			JVM
+	
+Implementing Distributed environment communication: RMI , CORBA , Web Service
+
+
+
