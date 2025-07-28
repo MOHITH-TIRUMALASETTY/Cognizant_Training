@@ -148,6 +148,32 @@ $("pp") - selector - id
 $("dd") - selector - class
 <h1> Welcome to JQuery </h1>
 
+======JAVA SCRIPT ADVANCED======
+
+JS Global Function:
+	Pre defined function
+
+
+The error object :
+	JS has a built in error object that provides error information when an error occurs.
+	The error object provides two useful properties : name and message
+
+Finally - two different cases
+	  Some of the statement we can write inside a try block but it is possible that the JS Engine may avoid the execution of those lines of code
+	  CASE 1 :
+		We have written statement where the previous line throw error then this line can never be executed
+	  CASE 2 :
+		It is possible that JS Engine may avoid the execution of Non - JS object
+			File object
+			Db object etc...
+
+Six different types of errors:
+EvalError
+RangeError
+ReferenceError
+SyntaxError 
+TypeError
+URI Error
 
 
 

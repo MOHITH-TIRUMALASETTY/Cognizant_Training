@@ -1,0 +1,4792 @@
+
+
+
+Day-1 10th July 2025
+
+#JAVA OOP
+
+	Object Oriented Programming - Class Object Inheritance Polymorphism Encapsulation Abstraction
+		
+
+#Class Object
+
+		OBJECT - what we find in real life.
+                       - every object have attribute and action
+                       - tangible  - pen obj
+                         non tangible  - account
+
+
+		CLASS -  It is a blue print of an object
+
+
+					       Attribute				action
+ 
+			PenObject         color , cost , brand			        write
+
+
+
+
+		instance variable                                  				   Local variable
+		- any variable defined inside class outside method			- any variable declared inside method.
+                - instance variable have default value 
+			String  null
+			float  0.0f
+			
+
+
+          class  Pen {
+
+
+		String color;   // instance variable
+		float cost;
+		String brand;
+                String companyName;
+
+		void write(){
+
+                    int  a=3;   // local variable
+
+		}
+
+		public static void main(String args[]){
+			
+			Pen obj =  new  Pen();
+			obj.write();
+			System.out.println("color"+obj.color+"cost:"+obj.cost+"brand:"+obj.brand);
+
+		}
+
+	  }
+
+	/>javac Pen.java
+	/>java Pen
+
+                  
+        HandsOn- (Hello World using java)
+	   1.Identify 3 object, 5 attribute , 5 action
+	   2.Create  3 class
+	   3.Create object and print all the attribute value and call the function.
+		
+
+
+
+Software Project: Enterprise Level Application
+     e-com
+     banking
+     Assessment system
+     food delivery system
+     ride share system
+
+
+ 
+#UML
+
+-Use Case Diagram:
+	UML or Unified Modeling Language, is a standardized, general-purpose visual modeling language designed for specifying, visualizing, 
+        constructing, and documenting the artifacts of software systems.
+
+
+
+Actor :  who is doing the task ?
+
+     Assessment system : 
+
+		Employee 
+
+		Admin
+
+                instructor
+
+
+Use Case : Task done by the actor
+     
+
+   Employee :   SubmitAssessment  Login  SignUp
+
+   Admin :   ScheduleExam
+
+   Instructor:  CheckAnswer
+
+
+
+HandsOn:
+	1. Design your project with Actor and UseCase:
+
+		min  3 actor
+		min  20 usecase
+
+
+Software Design
+#SDLC -  3/4 months
+#AGILE -  2-4 week
+
+
+#definition
+- it is an iterative and incremental model.
+- iterative - same process is repeating again and again.ie getting the requirement , design , coding again same process again and again.
+		
+		design v1 => customer   rejected 
+                design v2 => customer   rejected
+                design v3 => customer   rejected 
+                design v4 => customer   accepted
+  
+- incremental - we have implemented some features in the beginning and keep on adding new features with the existing software.
+
+                0  1   1   2   3   5   8
+
+#agile principle             
+- customer no need to wait until all the features is done.
+- we release 10 features in each release.
+- we can accommodate the requirement from the customer.
+
+
+
+#communication
+- good communication between  customer ,  dev ,  tester , business analyst.
+  
+
+
+#Advanteges
+- requirement changes are allowed in any stage of development
+- in agile delivery is faster.
+
+         devteam(4) =>  2 features => 10 hr =>  completed
+         QA(3)    =>  2 features => 6 hr =>  completed
+
+          Standup meeting => 1 features 
+
+         devteam(4) =>  1 features => 4 hr =>  
+         QA(3)    =>  1 features => 3 hr => 
+
+
+          Standup meeting => update features 
+
+         devteam(4) =>  update features => 3 hr =>  
+         QA(3)    =>  update features => 2 hr => 
+
+
+#disadvantage
+- less focus on design and documentation but more number of meetings.
+ 
+
+#SCRUM
+-agile is a process model.(that is the process)
+-scrum(how to follow the process) is a framework through which we develop the software and release the software.
+-to follow the agile principle we follow the scrum framework.
+
+
+#SCRUM Team
+- normally contain 5-9 people. 
+- like product owner , scrum master , dev team , QA team
+
+- product owner - define the features of the product
+                - always connect with the customer
+                - priority on the features according to the market value
+                - adjust features and priority every iteration
+                - accept or reject work result.
+                - separate designation
+               
+- scrum master - different role
+               - facilitate and drive the agile process
+               - he make sure that people in the team follow the agile process or not.                       
+               
+- dev - design and develop software
+- QA - test the software
+
+
+
+11th July 2025
+What we have done last day ?
+
+#Java
+ Discovery,Version,Flavour,BuzzWords,
+ Lab-HelloWorld
+ JVM,JRE and JDK 
+ HandsOn-3
+
+ Java Control Flow
+
+ CLASS & OBJECT
+ instance var and local var
+ primitive and reference 
+ stack and heap area
+ Data Type 
+ Wrapper Class
+ Constructor, this ,this()
+ Lab-
+
+
+# Discovery
+# Version
+# Flavour
+	J2SE             J2EE               J2ME
+        core java        web                mobile
+					    android , adf faces , rich faces
+
+# BuzzWords
+	Object Oriented 
+ 	Distributed 
+ 	Platform Independent                                                                  
+ 	Secure
+ 	Multi threaded
+ 	Portable
+ 	Robust
+
+
+#Object Oriented
+
+	       OBJECT - what we find in real life.
+                       - every object have attribute and action
+                       - tangible  - pen obj
+                         non tangible  - account
+
+
+		CLASS -  It is a blue print of an object
+
+
+					       Attribute				action
+ 
+			PenObject         color , cost , brand			        write
+
+
+#Distributed
+	    - remotely call some function
+            - calling function from one JVM to another JVM	
+
+
+
+
+#Platform Independent
+	      -  JDK  is platform dependent
+              -  java is OS   Independent
+	      -  compiled once but run anywhere 
+
+
+#Secure
+
+		/> javac Hello.java // compilation
+
+			Hello.class
+
+		/> java Hello // run       JVM
+
+
+
+
+#Multi threaded
+
+		       Multi Threaded
+
+		        Process   (OS)               					  Thread (JAVA)
+			Multi Tasking                                                     Multi-Threading
+
+		     P1   P2    P3    P4                 				T1    T2     T3    T4
+
+	             R1   R2    R3    R4                                             ----------R-------------
+                                                                                                                                                                     
+	        - allocate separate resource                                   - all thread can share single resource
+			             for each process
+	        -  more  resource                                               - less resource
+	        -  expensive                                                    - less expensive
+
+
+
+
+HANDS On:- 3  Time - 10 min  
+
+Write a Program that accepts four Strings as command line arguments and generate the 
+output in a specific way as given below.
+
+Example:
+If the four command line arguments are ABC  , GLOBAL , Ltd and Bangalore then the output generated should be   
+ABC GLOBAL Ltd Bangalore.
+
+/> java  Pen  ABC GLOBAL Ltd Bangalore
+
+
+class Hello {
+
+	public static void main(String args[]){
+
+		String  s1 =args[0];
+		String  s2 = args[1];
+		String s3 = args[2];
+		String s4 = args[3]; 
+		System.out.println(s1 +" "+ s2 +" "+s3+" "+s4);
+
+	}
+}
+
+	/> javac  Hello.java
+
+	/> Java Hello   ABC GLOBAL Ltd Bangalore
+
+
+
+
+#JVM,JRE and JDK
+
+
+     				    jdk = Java Developement  Kit
+                                           = JDK  is platform dependent
+                                           = inside jdk we have jre
+
+                                     jre =  Java Runtime Env
+                                           =  It contain jvm , j2se packages and compilers
+
+
+                                    JVM =  Java Virtual Machine
+                                               =  It is defined inside JRE
+                                               =  It is used to run the byte code
+                                               =  JVM - specification
+                                                               BEA System -  JRocket
+                                                               Oracle  -  Hotspot
+                                               =  3 layer 
+                                                           1. class loader   2. byte code verifier  3. Execution unit
+
+                                               =  3 Different Phase
+                                                           1. Load Phase   2.  Link Phase   3. Initialization phase
+
+                                                    compilation                     running JVM
+                                      Hello.java   ===========>   Hello.class     =======>   MC/NC
+
+
+
+#java Control flow:(Hands-
+
+	A. selection (if , if else , switch)
+
+	B. Iterative (for, while, do-while)
+
+
+		class   IfElseDemo{
+                             public static void main(String args[]){
+                                        String  s1 = args[0];
+                                        int m= Integer.parseInt(s1)
+
+                                         if(m == 12 || m==1 || m==2)         												System.out.println("winter");
+                                         else if(m == 3 || m==4 || m==5)
+                                                                    													System.out.println("Spring");
+                                         else if(m == 6 || m==7 || m==8)
+                                                                            												System.out.println("Summer");
+                                         else                     													System.out.println("Invalid month");       
+                             }
+  		}
+		time - 10  min 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#UML:
+Sequence Diagram: A sequence diagram simply depicts interaction between objects in a sequential order i.e. the order in which these interactions take place.
+
+#Agile:
+scrum master
+
+
+
+#Agile
+
+#SCRUM terminology
+
+
+User Story - feature or module in software
+
+
+Epic - collection of user stories
+
+
+Product backlog -  it is a doc or excel contain list of user stories. prepared by product owner
+
+
+sprint/iteration - period of time to complete user stories.(develop, design, test etc)
+                 - min 2 week and max 4 week
+
+
+sprint planning meeting : meeting in the team and decided what are the features and created 
+                   , developed and  delivered to customer.
+
+
+
+Spring backlog - list of committed stories by dev/QA for specific sprint.
+
+               - for every sprint the Spring backlog will change.
+
+
+Scrum meeting - Meeting conducted by scrum master every day 15 min.
+              - called as scrum call/Standing meeting.
+                      3 questions:
+			- what did you do yesterday ?	
+			- what will you do today ?
+			- are there any impediments in your way ?
+
+
+
+Sprint retrospective meeting -  end of the spring one meeting
+                            -   what went wrong , what went right, any other thing you want to do next ?
+
+
+Story Point - during sprint planning meeting  every dev and tester will identify some stories.
+            - estimation is done in the form of story point.
+            - ex dev say they need some time to develop the sprint, tester say they need some time to define testcase the sprint
+
+
+ Ex  1 story point =  1 hr  / 1 day  depends on company
+
+     search  is story point -   dev - 5 hr  /  QA - 3 hr 
+
+
+Burndown chart - graph created by scrum master
+               - mainly display how much task remaining in the sprint.
+
+
+
+
+
+
+
+
+14th July 2025
+what we have done last day ?                   
+
+TOPICS:
+#JAVA
+Bean Class
+static 
+Object Relationship
+OOPs-Inheritance
+IS-A  HAS-A
+super
+super()
+Labs-
+Hands On-Clothing
+
+#UML: class diagram
+
+#User Interface
+Part-1
+   -What is Responsive Web Design ?
+   -Main Component - Fluid layout ,Fluid image, media queries 
+   -Tools of the trade- Editors, design tools, testing tools
+   -Html5 
+
+part-2
+   -CSS3 Structure
+   -Media Queries - style for all screen size and devices
+   -Project
+
+Part3
+   -What is Twitter Bootstrap ?
+   -getbootstrap.com
+   -base markup and css
+   -navbar & dropdowns
+   -rows , grids and media objects
+   -List groups & glyphicons
+   -Forms , Tooltips , Popovers
+   -Models & Tabs
+   -Accordions
+   -Project
+
+
+
+
+
+#Bean class
+	- any class that have instance variable and its getters and setters is called Bean class.
+        - why ?
+		- it is used to initialize object attribute.
+                - To implement data hiding.
+                       - private variable can not be accessed outside object.
+
+	 //Data Hiding : 
+                     - hiding attribute value and method inside the object.
+                     - data hiding is done using private access specifier.
+                      - implemented into two level:
+                                       A. data member
+                                        B. method level
+
+
+
+	class  Dept{
+
+		private int deptId;
+		private String deptName;
+
+
+		public void setDeptId(int did){
+			this.deptId=did;
+
+		}
+
+		public int getDeptId(){
+
+			return deptId;
+		}
+
+		public void setDeptName(String dName){
+			this.deptName=dName;
+		}
+
+		public String  getDeptName(){
+			return deptName;
+		}
+	   void display(){
+			System.out.println(deptId+"/"+deptName);
+		}
+		
+	}
+	class DeptDemo{
+		public static void main(String args[]){
+			Dept obj=new Dept();
+		//	System.out.println(obj.deptId+"/"+obj.deptName);
+		//	obj.display();
+			obj.setDeptId(1001);
+			obj.setDeptName("Admin");
+			System.out.println(obj.getDeptId()+"/"+obj.getDeptName());
+			
+		}
+	}
+
+
+#static 
+	- How we can access instance variable value from class ?
+
+			answer  :    object
+
+	- Is there any other way to access instance variable value without creating an object of the class ?
+
+			answer : static
+
+	- static is keywork
+	- static variable can be accessed using class name if main method is outside the class.
+	- static variable value can be accessed without class name if main method is in the same class.
+        - static variable value can be shared by multiple object.
+
+
+class  DeptDemo{
+		static int deptId;
+		static String deptName;
+
+		public void setDeptId(int did){
+			this.deptId=did;
+		}
+
+		public int getDeptId(){
+			return deptId;
+		}
+
+		public void setDeptName(String dName){
+			this.deptName=dName;
+		}
+
+		public String  getDeptName(){
+			return deptName;
+		}
+	        void display(){
+			System.out.println(deptId+"/"+deptName);
+		}
+		public static void main(String args[]){
+			//Dept obj=new Dept();
+		//	obj.getDeptId();
+			System.out.println(deptId+"/"+deptName);	
+		}
+	}
+
+         LAB - 5 min
+
+
+         class  EmployeeDemo{
+		
+		int empId=7;
+		static int deptId=8;
+
+		EmployeeDemo(){
+			empId++;
+			deptId++;
+			System.out.println("empId:"+empId+" deptId:"+deptId)
+		}
+
+		public static void main(String args[]){
+			EmployeeDemo obj=new EmployeeDemo();
+			EmployeeDemo obj1=new EmployeeDemo();
+			EmployeeDemo obj2=new EmployeeDemo();
+			EmployeeDemo obj3=new EmployeeDemo();	
+		}
+
+	 }
+
+
+#static block
+
+	- if we create multiple object , constructor is called multiple time but static block called only one time.
+	- first static blocked called then constructor called.
+
+
+	class  ProductDemo{
+
+		ProductDemo(){
+			System.out.println("Default constructor called");
+
+		}
+        static{
+            System.out.println("Static blocked called");
+        }
+
+		
+		public static void main(String args[]){
+
+			ProductDemo obj=new ProductDemo();
+			ProductDemo obj1=new ProductDemo();
+			ProductDemo obj2=new ProductDemo();
+			
+		}
+
+	 }
+
+
+#User Input In Java:
+		2 different approach:
+
+			A. Using BufferedReader
+			B. Using Scanner
+
+
+
+#A. Using BufferedReader
+
+	java.io.
+
+				Stream		StreamReader	     Reader
+
+				Binary            conversion         Character
+
+import java.io.*;
+class UserInputDemo{
+
+    public static void main(String args[])throws IOException{
+        
+            BufferedReader  rd=new BufferedReader(new InputStreamReader(System.in));
+			System.out.println("Enter your name:");
+			String name=rd.readLine();
+			System.out.println(name);
+            		System.out.println("Enter your marks:");
+            		String marks=rd.readLine();
+			System.out.println(marks);
+    }
+}
+
+
+limitation :
+	- we have to handle exception
+	- we have to convert binary to character.
+	- input can not be differentiated between different data types.
+
+# Using Scanner
+             A.     Module java.base   >   Package java.util   >   Class Scanner
+             B.     from java 5
+             C.     we don't have to handle Exception
+             D.     we are not responsible to convert  binary to character.
+             E.      user input is always available in the required format
+
+                                                                   
+import java.util.*;
+class   ScannerDemo{
+
+    public static void main(String args[]){
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter your name:");
+        String   s1 =  sc.next();
+        System.out.println("My name is"+ s1);
+
+        System.out.println("Enter your marks:");
+        int  s2 =  sc.nextInt();
+        System.out.println("My marks is"+ s2);
+
+    }
+}
+
+
+  //Object Relationship:
+
+
+		OBJECT - anything that have attribute and action.
+
+
+		OBJECT Relationship -   
+
+				 HAS  A   =  Association //aggregation
+
+					  = one object contain another object
+
+					many ClassRoom  have  many Chair
+
+					     Company have Employee
+
+						relationship name - Have
+						cardinality - 1:1 , 1:m, m:n , m:1
+
+
+	class  ClassRoom {
+
+		Chain   obj=new  Chair();
+
+	 }
+
+				HAS  A =  Composition 
+				       =  one object can not exist without the other
+
+					Order  contain OrderItem
+
+	class  Order{
+
+		OrderItem  obj=new OrderItem()
+
+	}
+
+
+
+					 
+
+# HAS A / association
+               - relationship between two object is called association where one
+                               object should contain another object.
+                -  one-to-one  , – one-to-many , – many-to-one , – many-to-many
+                -  two  type:
+                           A. Aggregation  - contained object can exist without the container object
+                                                     ex  Classroom  have  Student
+                                                                                                               
+                           B. Composition - contained object can not exist without the container object
+                                                      ex   order   contain  orderitem 
+
+                                                                                 
+                                                  one  classroom   have          many     chair       1:M
+                                                  one employee    have     one    manager       1:1
+                                                  many movie   done by    one actor          M:1
+                                                  many movie  done by many actor     M:N
+                        
+
+
+
+
+
+
+
+
+
+
+
+                                     
+                        # IS  A  /  inheritance :
+
+ 
+			OPs-Inheritance - IS   A
+
+                           - re-usability in java.
+			   - multiple inheritance does not suported by java.
+			   - Java support multiple inheritance with the concept 
+			    of interface.
+
+
+
+			    Manager  IS     A      Employee
+
+			    Car   IS   A   Vehicle
+
+
+class  Employee{
+
+
+}
+
+class Manager extends Employee{
+
+
+}
+
+
+
+
+
+class   Employee{
+                       private int  empId=1001;
+		       private  String  empName="Max";
+			           
+                       public int getEmpId(){
+                        return empId;
+                       }
+                       public void setEmpId(int eid){
+                        empId=eid;
+                       }
+
+                       public String getEmpName(){
+                        return empName;
+                       }
+                       public void setEmpName(String eName){
+                        this.empName=eName;
+                       }
+}
+
+class   Manager    extends  Employee{
+
+		       private String desig="Admin";
+			           
+                       public String getDesig(){
+                        return desig;
+                       }
+
+                       public void setDesig(String desig){
+                            this.desig=desig;
+                       }
+}
+
+ class   InheritanceDemo{
+			public static void main(String args[]){
+
+				      Manager  obj = new Manager();
+				      System.out.println(obj.getEmpId()+"/"+obj.getEmpName()+"/"+obj.getDesig());
+
+		}
+ }
+
+
+
+#super
+	- super is keyword in java.
+	- if base class and derived class have same variable name then creating an object of 
+	derived class it is not possible to print base class variable vale .
+	Base class variable value is hidden inside the Derived class.
+        if variable hiding is disease then super is cure.
+	- it is used to call base class variable and method.
+
+
+	class   A{
+
+		int a = 30;
+	}
+	class   B  extends A {
+
+		int a = 40;		
+
+		void show(){
+			System.out.println("a="+ a + "super.a="+super.a);
+		}
+
+	}
+	class SuperDemo{
+		public static void main(String args[]){
+
+			B  obj = new   B();
+
+			   obj.show();
+		}
+	}
+
+
+
+
+
+#super()
+
+			 super(): - It is used to call base class constructor.
+			          - It is used to implement re-usability.
+			          - super() must be the first statement inside the constructor.	
+	class AA{
+
+		int x;
+		int y;
+
+		AA(){}
+		
+		AA(int a,int b){
+		   this.x=a;
+		   this.y=b;
+		   System.out.println("x="+x+"y="+y);
+		}
+
+	}
+	class BB extends AA{
+		int z;
+		BB(){}
+
+		BB(int a,int b,int c){
+		    super(a,b);
+		   //this.x=a;
+		   //this.y=b;
+		   this.z=c;
+		   System.out.println("x="+x+"y="+y+"z="+z);
+		}
+	}
+	class MainSuperDemo{
+		public static void main(String args[]){
+			BB obj = new   BB(200,300,400);
+		}
+	}
+
+
+
+	              HandsOn - 5 // super()
+
+                                 BASE CLASS :  CLOTHING
+	                         attribute : id(int),price(double),size(int),color(string)
+                                 action: display()
+		        
+                                 DERIVED CLASS :  SHIRT
+		        	 attribute: fit (int)
+
+                                 DERIVED  CLASS :  TROUSER
+		       		 attribute:fit(int) , gender(string)
+		       
+	              s-1  Create 3 shirt object using shirt parameterized constructor and print the attribute.
+	              s-2  Create 3 trousers object using trouser parameterized constructor and print the attribute.
+
+
+
+#UML (5 class)
+
+A UML class diagram is a type of diagram used in software engineering to visually represent the static structure of a system.
+ It shows the classes, their attributes, operations (methods), and the relationships between them.
+ These diagrams are crucial for object-oriented design and help in modeling the structure and interactions within a software application. 
+
+Key Components of a UML Class Diagram: 
+Classes:
+Represent the main elements and concepts of the system. They are depicted as rectangles divided into three compartments: name, attributes, and operations.
+ 
+Attributes:
+Describe the properties or data of a class. They are listed in the middle compartment of the class rectangle. 
+
+Operations:
+Represent the methods or functionalities of a class. They are listed in the bottom compartment of the class rectangle. 
+
+Relationships:
+Indicate how classes relate to each other, including inheritance, association, aggregation, and composition. 
+
+
+
+
+
+
+#User Interface
+Part-1
+   -What is Responsive Web Design ?
+   -Main Component - Fluid layout ,Fluid image, media queries 
+   -Tools of the trade- Editors, design tools, testing tools
+
+   -Html5 
+
+
+
+
+
+
+
+
+
+                   
+		# Responsive Web Design:
+			- An approach to designing websites and applications that  offers easy browsing 
+			and navigation on wide range of devices.
+
+
+
+
+
+
+
+		# 3  Component To Create Responsive Web Design
+
+			A.   Fluid and Flexible layout
+                                                                   
+				width=90%
+
+
+			B.   Flexible images 
+				img{
+				    max-width=100%
+				}
+
+
+
+			C.   CSS3  Media Queries (@media)
+
+                       mobile          tablets              mini tablets                 desktop
+			600px           700px              320px-568px                768px-980px
+
+                                         
+                       mobile.css      tablet.css           mtablet.css            desktop.css
+
+
+
+			<link rel="stylesheet" media="only screen and (mid-width:320px)
+                                                         and (max-width:568px)" href="mtablet.css"/>
+
+
+
+
+
+
+
+
+
+
+
+			// HTML 5   
+
+			-   2006     -   HTML  5
+			-   HTML 5   =    HTML  +   CSS   +   Java Script
+			-   HTML  Created  By    Tim  Berners - Lee
+			-   HTML 5  Created   By      W3C     +     WHATWG
+			-   HTML 5  web Page is Device independent
+			-   HTML 5   Reduce the need of Java Script in Form Validation
+			-   HTML  5   Better View Of Code
+			-   HTML  5  support  media tag
+			-   HTML 5   have root element as    <!DOCTYPE html>
+
+
+
+
+			//HTML 5  General Semantics
+			-  <section> , <article>, <header>,  <footer>, <hgroup>,<aside>,   
+			   <detail>, <summary>, <figure>,<figcaption>,<address>,<base>,<blockQuote>
+
+
+
+			//Structure  OF    HTML 5   Document
+			
+			<!DOCTYPE html>
+			<html>
+    			<head>
+    			</head>
+    			<body>
+				<header></header>   -   at the beginning
+				<nav></nav>  -   navigational link
+				<section>       -  used to define grouping of context
+					<article></article>    -   self independent content
+					<article></article>
+					<article></article>
+				</section>
+				<footer></footer>
+			</body>
+			</html>
+
+
+			<address>
+				- text in the element is italics
+				- related to contact info
+
+			<aside>
+				-  related  information about something
+
+                       <article>
+				-   self independent info
+
+			<base>
+				-  default link and default target for all  hyperlink
+				-  it is defined inside the head tag 
+
+			<blockquote>
+				-  to place the text separately ie tab space before and after
+				   the text.
+
+			<details>   -  it is used to show some extra info
+			<summary>  - it is used inside <details>
+    
+			<hgroup>
+			                     -  collection of headings
+                                             -  browser will consider all the headings as a group
+
+			<figure>,<figcaption>
+
+
+
+
+#Example
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<address>
+    D606 , Eswar Hotel ,
+    Padur , Chennai-560045
+</address>
+
+This is Cognizant
+<aside>
+    A cloud-native application is a software system designed and built to leverage the unique characteristics 
+    of a cloud computing environment, such as scalability, elasticity, and resilience. These applications are 
+    typically constructed using microservices, containerization (like Docker), and automated deployment pipelines (CI/CD).
+     Cloud-native applications are built from the ground up to maximize the benefits of cloud infr
+</aside>
+
+<article>
+    Welcome To Cognizant
+    <p>
+        A cloud-native application is a software system designed and built to leverage the unique characteristics
+         of a cloud computing environment, such as scalability, elasticity, and resilience. These applications are typically 
+         constructed using microservices, containerization (like Docker), and automated deployment pipelines (CI/CD). 
+        Cloud-native applications are built from the ground up to maximize the benefits of cloud infr
+    </p>
+</article>
+
+
+<blockquote>
+    A cloud-native application is a software system designed and built to leverage
+     the unique characteristics of a cloud computing environment, such as scalability, elasticity, and resilience. 
+     These applications are typically constructed using microservices, containerization (like Docker), and automated deployment 
+     pipelines (CI/CD). Cloud-native applications are built from the ground up to maximize the benefits of cloud infr
+</blockquote>
+
+  <details>
+    AAAAAAAAAAAAA
+    <summary>
+        A cloud-native application is a software system designed and built to leverage the unique characteristics
+         of a cloud computing environment, such as scalability, elasticity, and resilience. These applications are 
+         typically constructed using microservices, containerization (like Docker), and automated deployment pipelines (CI/CD).
+          Cloud-native applications are built from the ground up to maximize the benefits of cloud infr
+    </summary>
+  </details>
+
+
+  <figure>
+    <img src="C:\Users\Amitava\OneDrive\Desktop\Java Batch\day-3\ui\ship.jpg"/>
+    <figcaption>This is cognizant</figcaption>
+  </figure>
+
+
+    <header>
+
+    </header>
+    <nav>
+
+    </nav>
+    <section>
+        <article>
+
+        </article>
+    </section>
+    <footer>
+
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+                                                    // Inline Elements
+
+                  				<mark> , <meter> , <progress> , <time>
+
+
+                                                          <mark>   - it is used to highlight the text
+                                                                   - by default text background color is yellow.
+
+                                                          <meter>
+                                                                            <meter value="0.2"  low="0.4" high="0.9" optimum="0.5"></meter>
+                                                                            green  -  available
+                                                                            yellow - warning
+                                                                            red   -   no
+                                                                            - optimum is used to define floating point.
+
+                                                          <progress>
+                                                                             <progress  value="20"     max="100"> </progress><br>
+                                                                             - used to get progress bar
+
+                                                          <time> 
+                                                                          - it is used to show time.
+                                                                       <p> Tomorrow our session will start at 1.30 pm IST<p>
+                                                                       <p> Tomorrow our session will start at <time>1.30 </time> pm IST<p>
+
+
+
+					Break Time - 10 mins
+
+
+
+
+                                                  //Input Form Controls
+                                                                        - email , url , number , range , date picker , search , color
+
+                                                                         -email
+                                                                         -telephone
+                                                                         -url
+                                                                         - number
+                                                                         - file
+                                                                         - color                           r                g               b
+                                                                                                          0                 0              0     =======>  black
+                                                                                                           225            225              225 =======> white
+
+                                                                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+	<head>
+	</head>
+	<body bgcolor="blue">
+		<form name="input" action="#">
+			<fieldset>
+				<p>
+		      		<label for="name">Name:</label>  <input type="text" name="name" required maxlength="30"/>
+		        	<p>
+		        <p>
+		      		<label for="email">Email:</label> <input type="email" placeholder="Enter your mail" name="email" maxlength="30"/>
+		        </p>
+		         <p>
+		      		<label for="tel">Telephone:</label> 
+                     		<input type="tel" placeholder="Enter your phone" name="phone" maxlength="30" readonly/>
+		        </p>	
+                	<p>
+		      		<label for="Abstract">Abstract:</label> <textarea rows="5" cols="80" name="abstract">
+                    		</textarea>
+		        </p>
+                	<p>
+		      		<label for="Abstract">File for attachement:</label><input type="file" name="file" id="file"/>
+		        </p>
+                	<p>
+		      		<label for="startdate">Joining date:</label> <input type="datetime-local" name="user_date"/>
+		        </p>
+                 	<p>
+		      		<label for="startdate">Search:</label> <input type="search" name="user_search"/>
+		        </p>
+                  	<p>
+		      		<label for="product color">Color:</label> <input type="color" name="user_search"/>
+		        </p>
+                
+                	<p>
+                    		<input type="submit" value="submit"/>
+                	</p>
+                       </fieldset>
+		</form>
+	
+	</body>
+</html>
+
+
+
+//Page Design Using html 5
+
+
+
+15th July 2025
+what we have done last day ?
+
+#JAVA
+ Array
+ VarArg .
+ String,StringBuffer,StringBuilder
+ == equals()
+ HandsOn -
+
+
+#Agile
+Agile Values
+Agile Principles
+Agile vs. Waterfall Methodology
+How to Write Effective User Stories
+Writing Acceptance Criteria for User Stories
+
+
+#UI-HTML5CSS3Bootstrap5
+part-2
+   -CSS3 Structure
+   -Media Queries - style for all screen size and devices
+   -Project
+
+Part3
+   -What is Twitter Bootstrap ?
+   -getbootstrap.com
+   -base markup and css
+   -navbar & dropdowns
+   -rows , grids and media objects
+   -List groups & glyphicons
+   -Forms , Tooltips , Popovers
+   -Models & Tabs
+   -Accordions
+   -Project
+
+
+
+
+ Array
+ VarArg
+ HandsOn -
+
+
+			//Array
+			          - It is  used to collect similar type of elements.
+                                  - Array index will always start from 0.
+                                  - c programming  array -    primitive
+			          - java programming array - object
+                                  - array is collection of elements of fixed length once created 
+                                                                     can not be changed.
+
+
+
+                                //array of int
+			          int    a[] =   new    int[5];
+				  a[0] =  20
+				  a[1] =  21
+				  a[2] =  22
+                                  a[3] =  23
+				  a[4] =  24
+			          stem.out.println(a[3]);
+
+
+
+			       //array of String 
+				String   s []= new  String[4];
+				    s[0] = "srini";
+				    s[1] = "nikihil";
+				    s[2] = "navin";
+				    s[3] = "max";
+				System.out.println(s[2]);
+
+
+
+			         //Array of User defined Class Object
+				class  Shirt{
+                                                                  
+				}
+
+				Shirt    sh[] = new Shirt[3];
+				sh[0] = new Shirt(100,300.00,45,"yel",6);
+				sh[1] = new Shirt(101,300.00,45,"red",6);
+				sh[2] = new Shirt(102,300.00,45,"gre",6);
+		                System.out.println(sh[1].getColor());
+
+
+
+
+
+                         //Two D  Array:
+
+				int     a[][] = new int[2][2]; 
+			        // row = 0 , 1    //column = 0,1
+
+				a[0][1] = 99;
+                                a[0][0] = 100;
+
+			       System.out.println(a[0][0]);
+
+
+
+
+java 5     Var  Arg  = Variable Argument
+
+
+
+	
+			class   AA{
+
+				static void  show(int arr[]){
+					for(int i : arr){
+						System.out.println(i);
+					}
+
+				}
+
+				public static void main(String args[]){
+
+					int  a[]= {20,30,40,50,60};
+					show(a);
+
+				}
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+           
+		
+
+			        //Variable Arguments or   VarArgs
+                                  -  from java 5 
+				  -  Var Arg is used to remove array implementation in Java.
+				  -  Var  Arg is defined using 3 dot.
+
+
+
+                         //pass arg using array
+			  class     Demo1 {
+				static void show(int x[]){
+					for(int  i  :  x){
+						System.out.println(i);
+					}
+				}
+				public static void main(String args[]){
+					int    a[] = {20,30,40,50}
+					show(a);
+				}
+			  }          
+
+
+   
+			//pass arg using VarArg
+			class     Demo2 {
+
+				static void show(int ... x){
+					for(int  i  :  x){
+						System.out.println(i);
+					}
+				}
+
+				public static void main(String args[]){
+					//int    a[] = {20,30,40,50}
+					show(20,30,40,50);
+				}
+
+			  }             
+
+
+
+
+		// Limitation  Of Array :
+			=>  Collection of Elements Of Fixed Length
+
+				
+
+		
+	    Hands On : Time : (15 min): Assignment 8
+
+			Write a program that takes as input the size of the array and the elements in  
+                        the array.
+			The program then asks the user to enter a particular index and prints the element 
+			at that index. Index  starts from zero. 
+
+			Sample Input and Output 1:
+			Enter the number of elements in the array
+ 			 2
+			Enter the elements in the array
+  			50
+  			80
+			Enter the index of the array element you want to access
+    			1
+			The array element at index 1 = 80
+			The array element successfully accessed
+
+
+
+
+
+                     [Break - 10 mins]
+
+
+
+
+
+#Agile  1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11.  12. 13. 14.  15. 16. 17. 18. 19. 20 21. 22. 23. 24. 25. 26. 27.  
+Agile Values
+Agile Principles
+Agile vs. Waterfall Methodology
+How to Write Effective User Stories
+Writing Acceptance Criteria for User Stories
+
+
+
+
+		  
+
+
+
+
+Agile Values (from the Agile Manifesto)
+1.Individuals and interactions over processes and tools
+Focus on collaboration and effective communication within teams rather than relying heavily on tools and rigid processes.
+
+2.Working software over comprehensive documentation
+Deliver functional products that provide value, rather than spending excessive time creating detailed documentation.
+
+3.Customer collaboration over contract negotiation
+Engage customers regularly for feedback and alignment, instead of depending solely on contract terms.
+
+4.Responding to change over following a plan
+Adapt to evolving needs rather than strictly adhering to initial plans.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Agile Principles (12 Key Principles)
+1.Customer satisfaction through early and continuous delivery
+Deliver valuable software frequently to ensure ongoing customer satisfaction.
+
+2.Welcome changing requirements, even late in development
+Embrace change to give customers a competitive advantage.
+
+3.Deliver working software frequently
+Release small, functional increments regularly (from weeks to a couple of months).
+
+4.Close, daily cooperation between business people and developers
+Promote direct and constant collaboration.
+
+5.Build projects around motivated individuals
+Support and trust the team to deliver quality outcomes.
+
+6.Face-to-face conversation is the most effective communication method
+Prioritize direct interaction for clarity and efficiency (in-person or virtual).
+
+7.Working software is the primary measure of progress
+Focus on actual functionality delivered, not just plans or documentation.
+
+8.Sustainable development pace
+Ensure the team works at a consistent, maintainable pace.
+
+9.Continuous attention to technical excellence and good design
+Maintain high-quality code and design standards for agility and scalability.
+
+10.Simplicity—the art of maximizing work not done—is essential
+Avoid overcomplicating solutions.
+
+11.Self-organizing teams produce the best architectures, requirements, and designs
+Empower teams to make decisions and take ownership.
+
+12.Regular reflection and adjustment
+Teams should reflect periodically on their performance and refine processes for improvement.
+
+
+
+
+
+
+#Agile vs. Waterfall Methodology: Key Comparison
+Agile Methodology						Waterfall Methodology
+
+Iterative and incremental					Linear and sequential
+
+Highly adaptive to changes at any stage				Limited flexibility after the planning phase
+
+All phases (planning, development, testing, etc.) run 
+concurrently in short cycles (sprints)				Phases are strictly sequential (requirements → design → implementation → testing → deployment)
+
+Continuous involvement throughout development			Minimal involvement after initial requirements gathering
+
+Frequent small releases of working software			Single, final delivery after the entire project
+
+Continuous feedback and improvement				Feedback usually after project completion
+
+Early detection of issues due to iterative reviews		Risks often identified late in the project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+When to Use Agile:
+When requirements are expected to evolve.
+For complex projects requiring regular customer feedback.
+When rapid delivery of working solutions is important.
+
+When to Use Waterfall:
+When requirements are fixed and well-understood.
+For regulatory or compliance-driven projects needing detailed documentation.
+In environments where scope and deliverables are unlikely to change.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#How to Write Effective User Stories
+A User Story is a short, simple description of a feature or functionality told from the perspective of the end user. 
+It focuses on what the user wants to achieve and why, rather than how to build it.
+
+
+#User Story Format (INVEST Model)
+Standard Format:
+As a [user role], 
+I want [goal or feature] 
+so that [benefit or reason].
+
+
+
+Example:
+As a student, 
+I want to receive email reminders for assignment deadlines
+so that I can submit on time.
+
+Example:
+As a [customer],
+i want [shopping cart features]
+so that [i can easily purchase items online.]
+
+Example: E-Com
+As a manager ,
+i want to generate report
+so that i can understand which department need more resources.
+
+Example: food delivery system
+As a [customer] ,
+i want to [receive an SMS ]
+so that [i can pick it up right away.]
+
+
+ 
+#INVEST Principles:
+Independent – Should be self-contained. should not have any dependency on other user story.
+Negotiable – Not a strict contract, open for discussion.
+Valuable – Delivers clear value to the user.
+Estimable – Team should be able to estimate the effort.
+Small – Manageable and completable within a sprint.
+Testable – Clear enough to validate through testing.(should have necessary info to validate)
+
+
+
+#Best Practices for Writing User Stories
+Focus on one specific user goal per story.
+Avoid technical details; keep it user-focused.
+Keep stories concise yet clear.
+Ensure the story can be tested and validated.
+Collaborate with customers or product owners for clarity.
+
+
+
+HandsOn:- Create 5 User Story for your project.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Writing Acceptance Criteria for User Stories
+Acceptance Criteria define the conditions that must be met for a user story to be considered complete and working as intended.
+
+
+
+
+
+#Characteristics of Good Acceptance Criteria:
+Clear, specific, and measurable.
+
+Testable (can be validated through manual or automated tests).
+Focused on user behavior and business rules.
+Common Formats for Acceptance Criteria:
+
+1. Given/When/Then Format 
+Given [context],
+When [action],
+Then [expected outcome].
+
+
+As a student, 
+I want to receive email reminders for assignment deadlines
+so that I can submit on time.
+
+
+Example:
+Given [that I am logged into my account,]
+When [I view my upcoming assignments,]
+Then [I should see email reminder status for each assignment.]
+
+
+2. Bullet Point List Format
+Email reminder is sent 24 hours before the deadline.
+User can opt in/out of email reminders.
+Reminder email contains assignment name and due date.
+If deadline is within 24 hours, email is sent immediately.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Example - Complete User Story with Acceptance Criteria:
+
+User Story:
+As a student, I want to receive email reminders for assignment deadlines so that I can submit on time.
+
+Acceptance Criteria:
+Given [I am a registered student,]
+when [an assignment deadline is within 24 hours,]
+then [I should receive a reminder email.]
+Email reminders include assignment name and due date.
+User can enable/disable reminders from the settings page.
+
+
+
+
+User Story:
+As an online shopper, I want to add items to a wishlist so that I can purchase them later.
+
+Acceptance Criteria:
+Given [I am logged into my account,] 
+when [I click “Add to Wishlist” on a product,] 
+then [the product should appear in my wishlist.]
+Wishlist items should display the product name, price, and image.
+If a product is already in the wishlist, the “Add to Wishlist” button should be disabled or changed to “In Wishlist”.
+I should be able to view and manage my wishlist from my account menu.
+Removing an item from the wishlist updates the list immediately.
+
+
+
+HandsOn: Create 5 acceptance criteria for your project.
+
+
+
+
+
+
+#Key Agile Metrics
+Agile metrics help teams track progress, predict delivery, and improve performance. 
+Two of the most commonly used metrics are Velocity and Burndown Charts.
+
+
+1. Velocity
+
+What It Measures:
+The amount of work (usually in story points) completed by a team in a single sprint.
+
+Why It’s Useful:
+Helps in predicting future sprint capacity.
+Supports release planning.
+Identifies productivity trends.
+
+Example:
+If a team completes 40 story points in Sprint 1 and 42 in Sprint 2, their average velocity is 41 points.
+
+
+2. Burndown Chart
+
+What It Measures:
+Shows remaining work versus time within a sprint or project.
+
+How It Works:
+X-axis = Time (e.g., sprint days).
+Y-axis = Remaining work (story points or tasks).
+Line trends downward as tasks are completed.
+
+Why It’s Useful:
+Provides a visual representation of sprint progress.
+
+
+Helps identify scope creep or bottlenecks.
+Useful in daily stand-ups and retrospectives.
+Types:
+Sprint Burndown Chart: Tracks work during a sprint.
+Release Burndown Chart: Tracks progress toward a larger release.
+
+
+
+
+
+
+1. Need for Maintenance:
+
+Correcting Defects: Fixing bugs or issues discovered after software deployment.
+
+Adapting to Environment Changes: Modifying software to work with new operating systems, databases, browsers, or hardware.
+
+Enhancing Performance: Improving efficiency, response time, or optimizing resource usage.
+
+Adding New Features: Extending the software’s functionality based on evolving business needs.
+
+Ensuring Security: Updating software to protect against emerging security threats.
+
+Legal/Regulatory Compliance: Modifying software to comply with new regulations or standards.
+
+
+
+
+2. Challenges in Software Maintenance
+
+Understanding Legacy Code: Original developers may not be available, and documentation may be outdated.
+
+High Complexity: Interdependencies between modules can make changes risky.
+
+Limited Documentation: Incomplete or outdated documentation increases maintenance difficulty.
+
+Regression Risks: Fixing one issue can unintentionally introduce others.
+
+Resource Constraints: Limited budgets, skilled personnel, or tools for maintenance.
+
+Change Management: Ensuring version control and proper tracking of all changes.
+
+
+
+
+3. Categories of Software Maintenance
+
+Category	Description
+Corrective	Fixing defects or errors reported by users post-deployment.
+Adaptive	Modifying software to adapt to changes in environment.
+Perfective	Enhancing functionalities or performance based on user feedback.
+Preventive	Making changes to improve future maintainability and prevent potential problems.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#CSS
+
+  Introduction to CSS
+  Styles and StyleSheets
+  Formatting with CSS
+  Links and Lists
+  CSS Box Model
+  CSS3
+
+  CaseStudy : Your Project Web Page 
+                                     
+
+
+
+
+//CSS  and CSS 3 Features 
+		   -World Wide Web Consortium(W3C) introduced CSS
+
+			- It is used to format(create good look and feel) the web page 
+			-  CSS1          - 1996
+			-  CSS2          - 1998
+			-  CSS3          - 1999
+
+
+
+                   - Formatting these HTML Pages will be a laborious process, as formatting elements
+			need to be applied to each and every page.
+			- selector - 
+			- declaration -
+
+		       // myhtml.html	
+
+			<!DOCTYPE html>
+			<html>
+			<body> 
+				<h1>  CSS is used to Create Good Look and Feel </h1>
+			</body>
+			</html>
+
+		
+
+                        //mycss.css
+	
+			 h1  selector
+			 {
+                                color  :   red         declaration(property : value)
+			 }
+
+
+
+CASE-1  lab-5 min(2.35-2.40)
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        
+        <style>    
+            h1 {
+                color : blue;
+                text-align: center;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1> Welcome To Css World !!! </h1>
+    </body>
+</html>		
+		
+
+
+			
+
+
+
+
+
+
+
+		
+ //  Styles and StyleSheets
+                 - There are two types of selectors :     id and class.
+
+ //web page that use selector id.
+             CSS id selector is used to specify a style for a single elements
+
+ //web page that use selector class
+             CSS class selector is used to specify a style for a group of elements
+
+
+CASE-2  5 min (2.46- 2.51)
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <style>
+            #paragraph{
+                text-align:center;
+                color: magenta;
+                font-family: serif;
+                font-size: 20px;   
+            }  
+            #paragraph1{
+                text-align:center;
+                color: blue;
+                font-family: serif;
+                font-size: 20px;   
+            }
+        </style>
+    </head>
+    <body>
+        <p id="paragraph1">  Total  Expense Of Last Months Travel </p>
+        <p id="paragraph">  Rs 100000.80 </p>
+    </body>
+    
+</html>
+
+
+
+CASE-3 class selector (2.54-2.59)
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        
+        <style>
+            .custom{
+                text-align: center;
+                color: aqua;
+                font-family: sans-serif;
+                font-size: 30px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+         <h1 class="custom"> Atos Global IT Solution </h1>
+          <p class="custom"> Whitefield </p>
+          <p class="custom"> Bangalore</p>
+        
+    </body>
+    
+</html>
+
+
+
+
+
+//Types Of Style Sheet
+            A. internal style sheet - defined inside he same html file
+                                    - using <style> element
+
+            B. external style sheet  - define    css inside a external .css file.
+
+            C. inline style sheet -  we define style attribute in the required tag.
+
+
+
+
+//external style sheet  - define    css inside a external .css file.
+           
+
+<!DOCTYPE html>  5 min  (3.09 - 3.14)
+<html>
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <link rel="stylesheet" type="text/css" href="css/index4.css" />   
+    </head>
+    <body>
+        <p>
+        Atos India is a subsidiary of Atos SE – head quartered in Paris, France – a leader in digital services serving a global client base. Atos is present in India since 1991, operating as a strategic Global Delivery Center for clients from a wide range of industry verticals across Europe, Americas, Asia Pacific and Middle East. Atos has also established itself as a key technology partner to some of the leading industries in the Indian subcontinent.
+        </p>
+          <p>
+        Atos India is a subsidiary of Atos SE – head quartered in Paris, France – a leader in digital services serving a global client base. Atos is present in India since 1991, operating as a strategic Global Delivery Center for clients from a wide range of industry verticals across Europe, Americas, Asia Pacific and Middle East. Atos has also established itself as a key technology partner to some of the leading industries in the Indian subcontinent.
+        </p>
+    </body>
+</html>
+
+index4.css
+p{
+    text-align:left;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 30px;  
+}
+
+
+
+//inline style sheet 5 min(3.25 - 3.30)
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+    </head>
+    <body>  
+        <h1 style="text-align: center;font-size: 30px">Cognizant Global  IT  Solution </h1>
+        <h2 style="text-align: center;font-size: 20px">Talent Transformation</h2>
+        <p style="text-align: center; font-size: 10px">
+        Cognizant India is a subsidiary of Atos SE – head quartered in Paris, France – a leader in digital services serving a global client base. Atos is present in India since 1991, operating as a strategic Global Delivery Center for clients from a wide range of industry verticals across Europe, Americas, Asia Pacific and Middle East. Atos has also established itself as a key technology partner to some of the leading industries in the Indian subcontinent.
+        </p>
+    </body>
+</html>
+
+
+//Formatting with CSS
+
+                                 css - background  
+                                         background-color
+                                         background-image 
+                                         background-repeat 
+                                         background-position
+
+
+                                css - text formatting
+                                Color
+				Alignment 
+				Decoration 
+				Transformation
+				Indentation
+
+
+
+
+
+CASE-4  5 min 
+
+<!DOCTYPE html>
+<body>
+    <style>
+             h1 {
+                background-color: cornsilk;color: cyan;text-align: center;
+            }
+        
+            h2{
+                background-color: cadetblue;color: aqua;text-align: center;
+            }
+            
+            p{
+                background-color: beige;color: blue;text-align: center;
+            }
+           
+    </style>
+
+</body>
+
+        <h1>Atos Global  IT  Solution </h1>
+        <h2>Talent Transformation</h2>
+        <p>
+        Atos India is a subsidiary of Atos SE – head quartered in Paris, France – a leader in digital services serving a global client base. Atos is present in India since 1991, operating as a strategic Global Delivery Center for clients from a wide range of industry verticals across Europe, Americas, Asia Pacific and Middle East. Atos has also established itself as a key technology partner to some of the leading industries in the Indian subcontinent.
+        </p>
+      
+        
+</html>
+
+
+
+
+
+CASE-5  TEXT DECORATION 5 min 
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <style>
+       
+            p{
+                text-decoration: line-through;
+                text-transform: capitalize;
+                text-indent: 300px;
+                font-style: italic;
+            }
+            
+            h1{
+                text-decoration: underline;
+                text-transform: lowercase;
+            }
+            
+            h2{
+                text-decoration: overline;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+	<h1>Atos Global  IT  Solution </h1>
+        <h2>Talent Transformation</h2>
+        <p>
+        Atos India is a subsidiary of Atos SE – head quartered in Paris, France – a leader in digital services serving a global client base. Atos is present in India since 1991, operating as a strategic Global Delivery Center for clients from a wide range of industry verticals across Europe, Americas, Asia Pacific and Middle East. Atos has also established itself as a key technology partner to some of the leading industries in the Indian subcontinent.
+        </p>
+</body
+</html>
+
+
+case-6   5 min  ( 3.50 - 4.00)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <style>      
+            ul.a{
+                list-style-type: circle;
+            }
+            ul.b{
+                list-style-type: square;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Technical Courses Offered </h1>
+        <p>Category A (language)</p>
+        <ul class="a">
+            <li>JAVA</li>
+            <li>.Net</li>
+            <li>Python</li>
+            <li>SQL</li>
+        </ul>
+        
+        
+        <p>Category B (frameworks)</p>
+        <ul class="b">
+            <li>Spring</li>
+            <li>Hibernate</li>
+            <li>Application Development Framework</li>
+        </ul>
+      
+    </body>
+    
+</html>
+        
+     
+CASE-7  box model   5 min  (4.00-4.05)
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <style>
+            
+            img.large {
+                height: 400px;
+                width: 500px;
+                padding-top:40px; 
+                padding-bottom:25px; 
+                padding-right:15px; 
+                padding-left:10px; 
+                border-style:solid; 
+                border-width:5px; 
+                border-color:red;
+                margin : 40px 30px 20px 10px;       
+            }
+            img.normal{
+                height:auto;
+                width:auto;
+            }
+        </style>
+    </head>
+    
+    <body>
+         <img class="normal" src="images/ship.jpg"/>
+         <img class="large" src="images/ship.jpg"/>
+    </body>
+    
+</html>
+        
+
+CASE-8
+
+//CSS   Links and Lists    5 min (4.15-4.20)
+
+			<a href="https://www.atos.net" >Home</a>
+
+			a:link – Unvisited link                                      yellow
+			a:visited – A link that the user has visited                 red
+			a:hover – A link over which the mouse pointer moving
+			a:active – A link, which has been just clicked               green
+
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <style>
+        
+            a:link {color:yellow}
+            a:visited {color:blue}
+            a:hover {color: red}
+            a:active {color: green}
+            
+        </style>
+    </head>
+    
+    <body>
+           <a href="login.html">Please click here for login </a>
+    </body>
+</html>
+    
+
+CASE-9   Border Radius - 5 min  
+
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <style>
+            
+            div{
+                border : 2px solid #111111;
+                background-color: blue;
+                width: 300px;
+                /*border-radius: 25px;*/
+                padding: 40px 40px;
+                border-top-left-radius:20px;
+                border-top-right-radius:20px; 
+                border-bottom-right-radius:50px; 
+                border-bottom-left-radius:50px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div>
+            Our experience and expertise spans across industry verticals such as MRT, FS, TMU, Engineering, Public, Health and Education with focus on enabling Digital Transformation, Technology Transformation Services, Applications Services , IT Infrastructure Services, Big Data and Cyber Security and High Performance Computing.
+        </div>
+    </body>
+</html>
+
+
+CASE-10   TEXT SHADOW  5 min
+
+<!DOCTYPE html>
+<html>    
+    <head>
+        <title>GETTING STARTED WITH BRACKETS</title>
+        <style>    
+            h1 {
+                text-shadow: 10px 15px 2px #0356fc;
+            }
+            div {
+                width: 200px;
+                height: 300px;
+                background-color: yellow;
+                box-shadow: 40px 20px 25px 10px #0356fc;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            Our experience and expertise spans across industry verticals such as MRT, FS, TMU, Engineering, Public, Health and Education with focus on enabling Digital Transformation, Technology Transformation Services, Applications Services , IT Infrastructure Services, Big Data and Cyber Security and High Performance Computing.</h1>
+        <div>
+            Our experience and expertise spans across industry verticals such as MRT, FS, TMU, Engineering, Public, Health and Education with focus on enabling Digital Transformation, Technology Transformation Services, Applications Services , IT Infrastructure Services, Big Data and Cyber Security and High Performance Computing.
+        </div>
+        
+      
+    </body>
+    
+</html>
+
+
+
+
+What we have done last day ?
+
+#JAVA
+
+#GIT
+
+#Bootstrap
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                              
+
+
+                                    
+
+			
+                                         
+                                       //List   Using  CSS
+
+                                                    ordered list (<ol>)      or    unordered list (<ul>)
+                                                    list-style-type
+                                                    list-style-image
+
+		               
+			<!DOCTYPE html>
+			<html>
+                                                               <head>
+				<style>
+					ul.a{
+						list-style-type:circle;
+                                                                                               }
+					ul.b{
+						list-style-type:square;
+					}
+                                                                           </style>
+                                                               </head>
+			<body> 
+				<h1>  Courses Offered By Atos BTLC </h1>
+				<p> Category User Interface  </p>
+                                                                           <ul class="a">
+				           <li>Anguler JS</li>
+				           <li>Ext JS</li>
+				           <li>React JS</li>
+                                                                           </ul>
+                                                                           <p> Category middleware  </p>
+				  <ul class="b">
+				           <li>Spring</li>
+				           <li>Micro service</li>
+				           <li>REST WS</li>
+                                                                           </ul>
+			</body>
+			</html>
+
+
+		//CSS  Box Model
+
+			A.  CSS   height and width
+			B.  CSS   padding 
+				- sorrounding space of content
+				padding-top:20px; 
+				padding-bottom:30px; 
+				padding-right:25px; 
+				padding-left:10px;
+
+					  top   right  buttom left
+                                                                           - padding:  20px  25px 30px 10px
+			C.  CSS  Border
+				- border-style:solid; 
+				  border-width:5px; 
+				  border-color:red;
+
+			D.  CSS  Margin
+
+				margin-top:20px; 
+				margin-bottom:30px; 
+				margin-right:25px; 
+				margin-left:10px;
+                                                                                            top    right  buttom left
+				margin:  20px  25px 30px 10px
+
+                                // CSS3  Features:
+
+                                                          A. border-radius
+				border-radius: 5px;
+                                                          B.  text-shadow
+				text-shadow: 10px  20px  5px  blue;
+			  C. box-shadow
+				box-shadow: 10px 10px 5px 20px green;
+			
+			  D. border-image
+				border-image-source,border-image-width, border-image-repeat , properties. 
+				border-image:url(m2.jpg) 30
+
+			  E. transform:rotate 
+				transform:rotate(70deg)
+
+			  F. transform:skew
+				transform:skew(35deg,25deg);
+
+			  G. CSS3 Transitions
+				CSS3 transitions are effects that let an element
+				gradually change from one style to another.
+
+				div:hover{
+					width: 200px;
+					height: 200px;
+					transform:rotate(180deg)
+				}
+
+			NEXT :  
+			Case Study Project(Html5,CSS3) =>
+
+                                                Responsive Web Page Design
+
+			
+                                                 mobile (240-568)                 tablets (569-767)                     desktopscreen(768-960)
+                                                                       
+                                                                                       
+
+                                                 @media only screen and (min-width: 768px) and (max-width: 960px){
+
+                                                             //desktop css logic
+                                                  }                                             
+ 
+                                                  @media only screen and (min-width: 569px) and (max-width: 767px){
+
+                                                             //tablets css logic
+                                                  }       
+                                                                        
+                                                   @media only screen and (min-width: 240px) and (max-width: 568px){
+
+                                                             //mobile css logic
+                                                  }   
+
+16th July
+What we have done last day ? 3 participants
+Topics:
+
+#JAVA
+OOPs-Polymorphism 
+ Function Overloading
+ API Example Of Function Overloading
+ Runtime Polymorphism
+ API Example Of Runtime Polymorphism
+ HandsOn - 10
+ final
+ OOPs-Encapsulation , Abstraction 
+ Abstract class and interface
+ HandsOn - 11
+
+#Java Script
+-Java Script Introduction
+-scripting language and programming language    
+-<script> to include JS inside html
+-variable creation features
+-data types
+-<noscript>
+-conditional statement
+  if else
+  else if else
+  switch
+- iterative statement
+  for
+
+#Bootstrap
+   -What is Twitter Bootstrap ?
+   -getbootstrap.com
+   -base markup and css
+   -navbar & dropdowns
+   -rows , grids and media objects
+   -List groups & glyphicons
+   -Forms , Tooltips , Popovers
+   -Models & Tabs
+   -Accordions
+   -Project
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //OOPs-Polymorphism 
+			
+			 Every day  how many interaction you do?
+
+
+				Navin(CEO)                          Max(Student)
+				    
+				   P					P			
+				   W					C
+				   C					F
+				   D					T
+				   C					S
+				   C					B
+				   
+
+
+
+                              OOPs-Polymorphism:
+
+                                    - Same person do different interaction
+
+					Polymer -  C  -   3   Different   State  [C , D, N]
+
+				    - Same function will do different task.
+				    - Two types of Polymorphism.
+						A. function Overloading or Compile Time Polymorphism
+						B. function Overriding or  Runtime Polymorphism
+
+
+
+
+
+
+
+
+
+
+
+			//Function Overloading  or Compile time Polymorphism
+                                 - same function name do different task.
+			         - func return type can be different.
+				 - based on number of arg and type of arg one of the func 
+                                         get selected during compile time.
+				
+
+
+
+			class   Calculator{
+				
+				static int   sum(int a,int b){return    a+b;}
+
+				static  float  sum(float a,float b){return a+b;}
+
+				static  float  sum(int a,float b){return  a+b;}
+
+
+				public static void main(String args[]){
+
+                                                sum(7.0f,9.0f);
+				                sum(99,88.0f);
+				                sum(17,19);
+				}
+			}
+
+
+
+
+			//API  Exampple of Compile Time Polymorphism
+
+				System.out.println(23);
+				System.out.println("Hello");
+				System.out.println(200.00);
+
+
+
+                         //Constructor Overloading
+
+				- constructor name is same.
+
+				- based on constructor arg and type of arg one of the constructor
+				   get selected during compiletime.
+
+
+
+                Overloading /Hands On - 7 : 5 min
+
+				write  a program that use overloaded method for 
+				printing different type of array (integer,double,character)
+
+
+
+
+
+
+
+
+
+			//Function Overriding
+				- same function do different  task
+				- inheritance(base class,derived class)
+				- when base class and derived class contain same function name
+				  with same method signature then   derived class method is overriden 
+                                                                             from base class method   with its own code.
+                                                                           
+
+
+			       class    Shape{
+
+				void area(){
+				    System.out.println("Inside Shape");
+				}
+
+			       }
+			        class   Circle extends Shape{
+
+                                     void area(){
+				    System.out.println("Calculate Circle  Area");
+				     }
+
+			        }
+			
+
+
+
+                            //Runtime Polymorphism
+
+				-DMD - Dynamic Method Dispatch
+
+				- Always base class ref will point to derived class object.
+				 but the reverse is not true.
+
+				 Shape   sh = new   Circle();   correct
+				 Circle c = new   Shape();  not correct
+
+
+
+
+
+
+
+				When an overridden method is called through a superclass reference, 
+				Java determines which version of the method to call based upon the 
+				type of the object being referred to at the time the call occurs.
+
+
+
+		               class    Shape{
+				void area(){
+				    System.out.println("Inside Shape");
+				}
+			       }
+
+			        class   Circle extends Shape{
+                                  void area(){
+				    System.out.println("Calculate Circle  Area");
+				}
+			        }
+
+			        class   MainDemo{
+
+				public static void main(String args[]){
+                                       
+					Shape   sh = new   Circle();
+					sh.area(); 
+				}
+			        }
+
+
+
+                        API  Example Of  Runtime Polymorphism:
+                                           toString()
+
+
+
+			
+			Object class :
+				- Any class in Java by default extends another class ie Object class.
+				- Module java.base   Package java.lang
+				-  11 methods   like toString()
+			 
+
+
+
+
+
+
+
+		HandsOn - 8: Runtime Polymorphism
+
+			Create  a base class Fruit which has name ,taste and size as its attributes .
+                        A method called eat() is created which describes the name of the fruit and its taste. 
+                        Inherit the same in 2 other class Apple and Orange and  override the eat() method
+			 to represent each fruit taste.   
+
+
+
+ what we have done last day ?
+
+ NEXT :
+
+ final
+ OOPs-Encapsulation , Abstraction 
+ Abstract class and interface
+ HandsOn
+
+ Inner Class and Annonymous Class
+
+ 
+			final :
+			             - It is a   keyword in java.
+			             - final class can not be extended.
+			             - final data member value can not be changed.
+			             - final method can not be overriden.
+			
+
+
+
+class  Account{
+	
+	int accountId=1001;
+	
+	void openAccount() {
+		
+	}	
+}
+
+class  SavingAccount extends Account{
+	
+	
+	void accOpen() {
+		
+		accountId=1002;
+	}
+	
+	void openAccount() {
+		
+	}
+	
+	
+	
+	
+}
+
+
+			
+
+
+                                                         
+                         #OOPs-Encapsulation , Abstraction 
+ 			 
+
+                                                          Abstraction  -  Expose the functionality to the outside world.
+
+                                                          Data Hiding - hiding the details or function inside the object.
+
+
+                                                          Encapsulation  =    Abstraction   +  Data Hiding
+                                                                           abstract ,interface       private
+
+
+
+
+                                                           //Abstraction Using Abstract Class
+                                                                 - abstract  is a keyword in java.
+                                                                 - abstract keyword before a class name define abstract class.
+                                                                 - it has 2 types of method
+                                                                              1. Method with definition
+                                                                              2. Method with declaration
+
+                                                                 - method with declaration must be abstract.
+
+                                                                 - any class extends an abstract class must have to override
+                                                                   all the abstract method declared in the abstract class.
+                                                                 - we can not create an object of an abstract class but we 
+			           can create an ref of an abstract class.
+                                                                 - any class that have abstract method , must be abstract.
+                                                                
+
+
+
+                                                          abstract  class  Account {
+                                                                    private  int  accId;
+                                                                    void  closeAcc(){    \\method with definition
+                                                                     }
+                                                                    void openAcc(){
+                                                                     }
+                                                                    void checkBalance(); \\method with declaration
+                                                           }
+
+
+
+
+                                                           limitation: Abstract class does not support the multiple inheritance. 
+
+
+
+
+
+
+			        //Abstraction Using interface(till java7)
+                                                               - interface is a keyword
+                                                               - interface support multiple inheritance.
+                                                               - by default interface variable are public static final.
+			       					- till java 7  interface have only method with dec. 
+                                                             -   by default , interface method is public and abstract.
+                                                               - any class implements an interface must have to 
+                                                                  override all the methods declared inside the interface.
+                                                               - we can not create an object of an interface
+
+
+public interface Account {
+	
+	int a=20;
+	
+	void  openAccount();
+	void  closeAccount();
+	
+}
+
+class  SavingAccount  implements Account{
+
+	@Override
+	public void openAccount() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void closeAccount() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+                                         difference of interface and abstract class
+
+                                                      1.   80% work need to be done - interface
+                                                      2.   20% work need to implement.- abstract class 
+
+
+
+
+
+
+                                                      handson:
+                                                        Create an interface Compartment to represent a rail coach. 
+                                                        Provide an abstract function notice in this class. 
+                                                        Derive FirstClass, Ladies, General, Luggage classes from the compartment class. 
+                                                         Override the notice function in each of them to print notice suitable to the type
+                                                         of the compartment.
+							Create a class TestCompartment . 
+							Write main function to do the following:
+							Declare an array of Compartment of size 10.
+                                                        Create a compartment of a type as decided by a randomly generated integer 
+                                                        in the range 1 to 4.
+                                                        Check the polymorphic behavior of the notice method
+           
+
+ 	
+
+
+
+// Bootstrap 
+                                                              - It is a framework or pattern.
+                                                              - reusability.
+                                                              - Twitter Bootstrap  officially released as opensource in 2011
+                                                              -  Mark Otto  and Jacob Created Bootstrap
+
+                                                              Bootstrap   ===  html5 + css3  + java script
+
+                                                              - versions   3.x   4.x    5.x
+                                                              - www.getbootstrap.com
+
+                                                        Why bootstrap  ?
+                                    
+                                                               A. Mobile first approach
+                                                               B.  Browser Support  - support all the popular browsers
+                                                               C. Easy to Get Started 
+                                                               D. Responsive Design - bootstrap responsive css can
+                                                                                                          adjust a Desktop, tablets or mobile
+
+                                                        Set Up Of Bootstrap:
+
+                                                               A. https://getbootstrap.com/docs/3.4/getting-started/
+			       B.  download   bootstrap-3.4.1-dist
+                                                               
+
+   -What is Twitter Bootstrap ?
+   -getbootstrap.com
+   -base markup and css
+   -navbar & dropdowns
+   -rows , grids and media objects
+   -List groups & glyphicons
+   -Forms , Tooltips , Popovers
+   -Models & Tabs
+   -Accordions
+   -Project
+
+                    
+
+
+17th July 2025
+what we have done last day ?
+
+#GIT
+DevOps
+Version Control System
+build tools
+HandsOn- 
+
+#Bootstrap
+HandsOn- Bootstrap project should have min 20 layout.(except 5)
+
+TechDemo:
+DevOps
+Agile 
+Bootstrap
+SDLC
+UserStories
+
+
+
+#GIT
+DevOps
+Version Control System
+build tools
+
+
+
+Software Project Management
+
+	1. SDLC - 3/4 months
+        2. Agile - 2-4 weeks
+        3. DevOps - 1 day
+
+DevOps Project : Cloud Native Application : 4 Pillar
+
+           MicroService + Containerization with Docker + Cloud + DevOps Using CICD
+									 GIT									
+	
+
+
+
+DevOps : 
+           -  It is not a tool or technology 
+           -  It is a new culture / process to develop , release and maintainance 
+                     of software application/project with higher quality , faster way.
+
+           - we achieve by using automation tools.
+                  
+
+               DevOps = developer(plan/code/build/test) +operations(release/deploy/operate/monitor)
+
+
+
+#why we need devops ?
+                  - required to know existing  sdlc models.
+                               -(old model)water fall model(1950-60)
+                               -(current model) agile model
+
+                  //Agile model
+                  - Most frequently used model .(last 15 years)
+                  - It is the combination of multiple sub model
+                                 - Rational Unify Model (Rup)
+                                 - Adaptive Software Development(ASD)
+                                 - crystal clear
+                                 - scrum
+                  - scrum is the most popular agile framework
+                  - continuous delivery
+                  - continuous feedback
+                  - requirements changes in the model
+                  - less development time
+                  - less development cost
+                  - client satisfaction is very high
+
+
+                  Why we need to go with devops ?  
+
+                 - devops and agile both are different model.
+
+                 - both the model support rapid software development
+                 - the different between both the model come after development.
+                 
+                                         DevOps                     development   +  operation  
+
+                                         agile                      development   +  no operations
+
+
+
+
+                 - in agile model separate team is responsible for separate task
+                                                                      like dev , test , deployment etc
+                 - devops person is responsible for all the task from dev to operations.
+                 - agile does not force automation  but devops is completely based  on automation.
+
+                 - agile     --->  speed --
+                 - devops  ---> quality + speed 
+
+
+
+
+                  //DevOps 
+                   - it is a new culture or process
+                   - it is the process of continuous development , continuous 
+                          build , continuous test , continuous release of software etc.
+                   - devops is automation tools.
+          
+
+                    what are the main tools we need to know to be devops engineer ?
+
+                      1. version control system
+                      2. build tools
+                      3. configuration management tool etc
+
+
+
+
+
+                     //version control system
+                                     /software configuration management
+                                                          /Source Code management
+
+                    -  need of VCS
+                    -  How VCS work ?
+                    -  Benefit of VCS
+                    -  Types of VCS
+                    -  Difference between centralized and distributed VCS
+
+
+
+
+		  CODE :   v1
+
+		  Customer Meeting 
+
+		  CODE :   v2
+
+		  Customer Meeting 
+
+		  CODE :   v3
+
+		  Customer Meeting 
+
+		  CODE :   v4
+
+		  Customer Meeting 
+
+		  CODE :   v5
+
+
+
+
+                    // Need of VCS
+                    - project module completed and demo done to client
+                    - client suggested some changes
+                    - project module updated and demo done to client
+                    - client suggested some changes
+                    - project module updated and demo done to client
+
+
+                    - every version should be maintained.
+                    - but maintaining multiple version is difficult task.
+                    
+                   Dev1  -->  abc.java
+                   Dev2  ---> abc.java  
+
+                   - to maintain different version of code we need VCS.
+                   - override of the code should not happen.
+                   - developer have share their code to peer developer
+                     so that multiple developer will work in collaborated way.
+                   - parallel development must be required.
+                   - to manage our code , such type of source code management system is version control system.
+
+
+
+
+
+
+
+
+
+
+
+------------------------------------------------------------------------------------
+              
+
+//How VCS work ?
+                  - we will follow a tool to manage the version.
+                  - it is not only for code 
+                  - any document if i want to maintain multiple version  
+                          tester  >>
+                          developer >>
+                          Project Manager >>
+                  
+                   - [work space ]  - used to write code.
+                                    - maintain multiple file
+
+                   - [repository] - VCS is applicable
+                                  - maintain multiple file
+
+                   - developer save all the files in the repository.
+                   - in repository all the data is stored as commit
+                      and one unique number is generated for each commit ie version1
+
+                   - commit - sending data from ws to repo
+
+                   - after demo to client
+                   - again  all the data is stored as commit
+                      and one unique number is generated for each commit ie version2
+
+                    - each details about the commit is stored.
+                    - so each commit version we can deliver demo to  client  from repository.
+
+                     - checkout - the process of sending file from 
+                                             repository to workspace.
+
+                    - we need a mechanism to do the process.
+                                      ie Version Control System.
+                    
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------
+                   //Benefit of VCS
+                   - we have different version and we can choose any 
+                     version based on client requirement.
+                   - with every version we can maintain metadata about code.
+                   - multiple developer can work in collaborate way
+                   - dev can share the code to the peer developer
+                   - we can make access control ie who can update code or who can modify code.
+ 
+
+
+-----------------------------------------------------------------------------
+         // Types of VCS
+
+                   1. Central Repository Server
+                                 - version control happen only in one place.
+                                 - all the operations happen in Central Repository
+                                 - easy to setup and easy to maintain
+                                 ie  CVS , SVN , Perforce
+
+		                         Central Repository Server
+                                               commit
+               [ Work Space]   --------------->  [   v1 , v2 ,  v3 , v4  ]
+                                              <---------------
+		                   checkout
+
+                                              commit
+               [ Work Space]    -------------->
+                                               <---------------
+		                 checkout
+
+		                commit
+               [ Work Space]   --------------->
+                                              <-----------------
+		               checkout
+
+                                             commit
+                [ Work Space]   --------------->
+		        <-------------------
+		       checkout
+
+
+
+
+-------------------------------------------------------------------------------------------------
+          Limitation of Centralized VCS
+
+          -  The total code stored at a single place ,  some thing wrong cause single point of failure.
+
+          -  All the dev should be connected with the centralized version  control system.
+             if network down , version control won't be available to dev.
+
+          -  All checkout and commit operations performed over network.
+             low performance.
+
+          - as  the number of file increase then for huge project  this centralized VCS have multiple problems.
+
+
+
+--------------------------------------------------------------------------------------------------
+       2. Distributed VCS
+	- here all workspace have a local repository.
+                   - all the versions are maintained in the local repository
+                   - even network down then also repository available.
+                   - all commit and check out is performed in the local repository
+                   - no ques of single point of failure.
+
+
+
+
+
+
+
+
+	How multiple dev will  work in collaboration ?
+                         - all the changes from WS1 will marge into WS4
+                         - push and pull operation between two dev - network required
+                         - checkout and commit operation - network not required
+
+                                                                                   push
+                      WS1[Files,Repository]                     ---->                    WS4[Files,Repository]
+                                                                <-----
+                                                                                      pull
+                      WS2[Files,Repository]                                                 WS5[Files,Repository]
+                      WS3[Files,Repository]                                                 WS6[Files,Repository]
+
+
+          Which tool follow this model  ?
+                             1. GIT , Fossil  etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ //Distributed VCS with Remote Repository:
+                        -  it is used to share our code to peer developer.
+
+
+                                                            
+
+                                          Centralized Repository          local  Repository
+                 dev  repository -                 only one                multiple repo
+       
+
+
+                                                                   
+//GIT  
+               - It is  a Distributed Version Control Tool
+               -  Linux  -  Created by Linux Torvalds 
+               -  GIT   - created by  Linux Torvalds 
+               - no single point of failure since all the dev have local repository.
+               - check out and commit performed locally.
+               - dev work space not required to connect to network
+               - staging area (it is part of developer machine)
+                               -  In git  commit is 2 step process
+                               -  first   we have to commit in the staging area 
+                               - then from staging area to local repository
+                               - staging area is a virtual area
+                               - we can double check any update before commit
+                               - it is not available in the other version of the VCS
+
+
+                                         WS1[Files]   -------commit--->         [local repository]
+
+                  GIT         -          WS1[Files]   ---------commit -------     [Staging Area]         --commit--->    [local repository]
+
+                            
+                  -  git will take the snap shot of the data and then store it
+                  -  cryptographic conversion done in the staging area
+                  -  convert our data into hashing algo and encrypted format  
+                  -  encryption and decryption is automatically take care of by git
+                  -  Branching and Merging
+
+
+----------------------------------------------------------------------------------------------
+
+step-1(global)
+
+Create your GitHub Account
+https://github.com
+username : Amit202020
+password : ********
+
+Create GitHub  repo
+
+name : java21
+
+repo path : https://github.com/Amit202020/java21.git
+
+
+step-2
+
+download git 
+          
+https://git-scm.com/downloads  and install
+
+	Git-2.50.1-64-bit
+
+
+step-3 
+
+go to git bash
+
+create local repository
+  /> git init <repo name>
+
+create clone repository
+  /> git clone  https://github.com/Amit202020/Html5Css3bootstrap4.git
+
+Send file from local to global repo
+  /> 
+
+
+  >> git status
+  >> git add .
+  >> git commit -m "class free code"
+  >> git push origin master
+
+
+
+
+
+
+
+
+
+
+18th July 2025
+What we have done last day ?
+done- Venigalla, Karthik, Upender
+
+#Project Artifact Review:
+1.Software Development Life Cycle
+2.Business Requirement Diagram
+
+
+#Java Script
+What JavaScript implementations are available?
+Variable creation features
+Data types
+Conditional Statement
+#ADM - Application Development and Maintenance
+#Agile - Reporting Progress in Agile Projects 
+#Advanced GIT
+#Advanced Bootstrap
+
+TechDemo:
+
+
+Done - [Prasanth][Teja]Hari,Abhishek,Ajay,Himanshu,Fasi,
+       Upender,Teja,Raghu,Mohith,[Karthik],Prasanth,Abhinav
+
+
+
+
+
+
+
+21th July 2025
+What we have done last day ?
+done- Venigalla, Karthik, Upender
+
+
+#Java Script
+What JavaScript implementations are available?
+Variable creation features
+Data types
+Conditional Statement
+JS Function
+JS Event
+
+
+#jQuery
+#Java Script and jQuery
+#JQuery
+#jQuery Features
+#JQuery Setup
+#HelloWorld using jQuery
+#selector - id , class , element
+
+#Project Artifact Review:
+2.Functional Requirements Specification 
+
+#ADM - Application Development and Maintenance
+#Agile - Reporting Progress in Agile Projects 
+#Advanced GIT
+#Advanced Bootstrap
+
+TechDemo:-1
+Done - [Prasanth][Teja]Hari,Abhishek,Ajay,Himanshu,Fasi,
+       Upender,Teja,Raghu,Mohith,[Karthik],Prasanth,Abhinav
+
+
+GIT
+Bootstrap
+Agile values and Principle
+User Stories
+BRD
+DevOps
+
+handsOn - bootstrap(15) , GIT() , BRD() , 
+
+
+
+
+
+
+
+#Java Script
+What JavaScript implementations are available?
+Variable creation features
+Data types
+Conditional Statement
+JS Function
+JS Event
+
+
+
+
+	HTML - markup 
+
+	CSS - create good look and feel 
+
+	JS/JQuery - logic inside page
+
+
+//Java Script
+
+
+- java script is used to define function in webpage
+- task of function
+            - take input , perform action and provide output 
+
+
+                     int  getHello(int a , int b){
+
+			return    a+b;
+
+		     }
+-object oriented Language
+
+		OOP - 1 2 3 4 5 6
+
+-developed by Netscape Corporation in 1996.
+
+
+
+			Java       />javac  Hello.java
+				   />java Hello         JVM
+
+			
+
+			JS         Browser 
+							JS Engine
+
+
+-js is used in browser.
+
+
+
+
+
+
+
+
+
+
+
+
+script - lightweight programming
+
+- scripting language and programming language 
+
+      SL - less powerful as most of the complex logic we can not implement.
+           - lines end with ; but use is optional
+           - interpreter based
+
+		hello.js  =>  => NC/MC
+
+
+      PL - more powerful as most of the complex logic we can implement.
+           - lines end with ; and use is mandatory.
+           - compiler based.
+
+		Hello.java =>  Hello.class => NC
+
+
+        
+- <head> - is the logical part of the web page.
+                 - we write jS inside the <head>
+- <body> - visual area of the page.
+
+
+- Version	Official Name
+  ES5	        ECMAScript 5 (2009)
+  ES6	        ECMAScript 2015
+	        ECMAScript 2016
+	        ECMAScript 2017
+
+The JavaScript naming convention started with ES1, ES2, ES3, ES5 and ES6.
+But, ECMAScript 2016 and 2017 was not called ES7 and ES8.
+Since 2016 new versions are named by year (ECMAScript 2016 / 2017 / 2018).
+
+
+
+
+
+//What JavaScript implementations are available?
+
+The first ever JavaScript was created by Brendan Eich at Netscape, 
+and has since been updated to conform to ECMA-262 Edition 5 and later versions.
+This engine, code named SpiderMonkey, is implemented in C/C++. 
+
+
+The Rhino engine, created primarily by Norris Boyd (also at Netscape) 
+is a JavaScript implementation written in Java. 
+Like SpiderMonkey, Rhino is ECMA-262 Edition 5 compliant.
+
+
+ECMA-262 5.1 edition, June 2011.
+ECMA-262, 6th edition, June 2015.
+ECMA-262, 7th edition, June 2016.
+ECMA-262, 8th edition, June 2017.
+ECMA-262, 9th edition, June 2018.
+ECMA-262, 10th edition, June 2019.
+ECMA-262, 11th edition, June 2020
+
+Several major runtime optimizations such as TraceMonkey (Firefox 3.5), JägerMonkey (Firefox 4)
+
+Google's V8, which is used in the Google Chrome browser
+
+The Chakra engine used in Internet Explorer 
+(although the language it implements is formally called "JScript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- window is class that represent browser.
+- document is object that represent page.
+- inside window we can have multiple object ex document
+
+
+- we can write html inside java script.
+- html files are like exe files.we have to use
+  <script> to include Js inside html.
+
+
+
+
+hello.html
+
+<head>
+<script src="myjs.js">
+</script>
+
+<script type="text/javascript" language="javascript">
+  document.write("Welcome  to  JS");
+<script>
+
+
+- JS can be written in common area or in a block
+- block is more powerful than common area.
+
+
+- in realtime we use external java script.
+
+
+
+
+
+
+- in scripting variable is implicit.
+         - during runtime interpreter try to understand 
+            what you have declared.
+         - what data type it is based on the data.
+- in programming language variable is explicit.
+         - programmer must declare the int , float type.
+
+
+//variable creation features
+  - variable should start with alphabet
+  - variable should not contain special character
+  - variable are case sensitive.
+  - variable start with var.
+
+
+			int  a = 10   // java  //explicit
+
+
+		        var  b = "hello" // java script //implicit
+
+
+
+//data types
+        primitive (int,float,string,boolean,undefined,null)
+        non primitive datatypes(object)
+
+<script type="text/javascript" language="javascript">
+  var x = 60;
+
+  document.write("the value is"+x+"<br/>");
+
+  var y = 'Hello';
+  document.write("the str is"+y+"<br/>");
+
+</script>  
+
+
+document.write("This is 'good' book");
+
+
+ ' '  inside  " "  - allowed
+ " " inside  ' '  - allowed
+
+  '  ' inside  '  ' - not allowed
+  " " inside  " " - not allowed
+
+
+
+
+
+
+
+
+
+
+
+<noscript>
+    - sometimes we are confused weather browser
+      does not support JS or we have some error 
+      in the JS code.
+     - crome by default support Java Script
+     - mozila by default support Java Script
+     - IE by default support VB Script
+
+<noscript>
+  it does not support java script 
+</noscript>
+
+
+
+-conditional statement
+
+<head>
+<script type="text/javascript"/>
+
+var x=prompt("Enter Any Number:","");
+
+if(x>100)
+{
+alert("User Enterted Number is :"+x);
+}
+else
+{
+alert("User Enterted Number is"+x);
+}
+
+</script>
+</head>
+
+
+=====================================
+<head>
+<script type="text/javascript"/>
+var x=prompt("Enter Any Number:","6");
+if(x>100)
+{
+alert("User Enterted Number is :"+x);
+}
+else if(x<100)
+{
+alert("User Enterted Number is"+x);
+}
+else if(x==100)
+{
+alert("User Enterted Number is"+x);
+}
+else{
+   alert("invalid input");
+}
+</script>
+</head>
+
+
+
+
+
+
+
+
+
+======================================
+<head>
+<script type="text/javascript"/>
+
+var course=prompt("Enter Any Course:","JAVA");
+
+switch(course)
+{
+case 'HTML5'
+doument.write('Course Name is:'+course);
+break;
+
+case 'JAVA'
+doument.write('Course Name is:'+course);
+break;
+
+default
+document.write('selected course does not exist');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+=======================================
+-for
+<head>
+<script type="text/javascript">
+for(i=1;i<=15;i++){
+document.write("The Value is:"+i+"<br/>");
+}
+</script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==========================================
+-while 
+       
+<script language="javascript">
+var i =0;
+while(i < 5)
+{
+    document.write("number is:"+ i);
+    i++;
+}
+</script>
+==========================================
+-function
+      - code reusability
+      - A function is a group of reusable code which can be called anywhere in your program. 
+        This eliminates the need of writing the same code again and again. 
+	It helps programmers in writing modular codes. 
+	Functions allow a programmer to divide a big program into a number of small and 
+        manageable functions.
+      
+Ex- function without argument
+<head>
+<script type="text/javascript">
+
+function MyWarnings()
+{
+    alert("welcome to JS");
+}
+
+</script>
+</head>
+<body>
+<button onclick="MyWarnings()">Click Warnings</button>
+</body>
+
+
+
+
+
+
+
+
+===========================================
+Ex- function with argument
+
+<head>
+
+<script type="text/javascript">//worker
+var x=30;//global var
+function addition(x,y)
+{
+var y=40;//local var
+return x*y;
+}
+</script>
+
+</head>
+<body>
+
+<script language="javascript">//caller
+document.write("addition is:"+ addition(60,40));
+</script>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+==============================================
+<head>
+<script type="text/javascript">
+function display()
+{
+document.bgColor="#33daff";
+}
+</script>
+</head>
+<body>
+<button onclick="display()">Click Warnings</button>
+</body>
+
+-document is related to body.as it is visual
+
+
+
+==================================================
+Hands On:
+- call a add or mul method recursive way using java Script from 1 to n.
+
+function add(number) {
+  if (number <= 0) {
+    return 0;
+  } else {
+    return number + add(number - 1);
+  }
+}
+
+document.write(add(4)); 
+
+==================================================
+Event-
+What is an Event ?
+JavaScript's interaction with HTML is handled through events that occur when the user or the browser
+manipulates a page.
+When the page loads, it is called an event. When the user clicks a button, that click too is an event. 
+Other examples include events like pressing any key, closing a window, resizing a window, etc.
+
+
+click - happened when user click link or form.
+focus - happened when input focus is given to input element.
+onload - happened when an object has been loaded.
+mouseover - happened when the user moves the mouse pointer.
+mouseout - happened when the user moves the pointer off.
+select - happened when the user select form element.
+submit - when the form is submitted
+unload - happened when the user unload the page.
+
+
+Ex-1
+<head>
+<script type="text/javascript">
+function display()
+{
+alert("Welcome To Events")
+}
+</script>
+</head>
+<body>
+<button onclick="display()">Click Warnings</button>
+</body>
+
+
+
+Ex-2
+<head>
+<script type="text/javascript">
+function display()
+{
+    document.getElementById("dd").innerHTML=Date()
+}
+</script>
+</head>
+<body>
+<p id="dd">Click the button to display date</p>
+<button onclick="display()">Click Here</button>
+</body>
+
+
+Ex-3
+<head>
+<script type="text/javascript">
+function pageload()
+{
+alert("page loaded successfully")
+}
+</script>
+</head>
+<body onload="pageload()">
+<h1> refresh the page to check it</h1>
+</body>
+
+Ex-4
+<head>
+<script type="text/javascript">
+function imageload()
+{
+alert("image loaded successfully")
+}
+</script>
+</head>
+<body>
+<p> once image loaded , message will be displayed</p>
+<img src="myimage.jpg" width="200px" height="200px" onload="imageload()"/>
+</body>
+
+- onload will execute only when the particular element loaded.
+
+
+
+//Big Arrow (Fat Arrow) Functions==Lambda Expression
+Before this new standard, JavaScript used the function keyword to create functions. 
+Now, we can use the big arrow, =>, to write functions.
+
+/pre ES-6
+function add(num1, num2) {
+ return num1 + num2;
+}
+
+
+function add(num1, num2) {
+ return num1 + num2;
+}
+
+function (num1, num2) {
+ return num1 + num2;
+}
+
+(num1, num2) {
+ return num1 + num2;
+}
+
+(num1, num2) => num1 + num2;
+
+
+
+function mul(num1, num2) {
+ return num1 * num2;
+}
+
+
+(num1, num2) => num1 * num2;
+
+
+
+ 
+/ES6 (implicit return)
+const addImplicit = (num1, num2) => num1 + num2;
+ 
+console.log(add(3, 4));
+console.log(addImplicit(3, 4));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#jQuery
+#Java Script and jQuery
+#JQuery
+#jQuery Features
+#JQuery Setup
+#HelloWorld using jQuery
+#selector - id , class , element
+
+
+
+#JQuery
+- it is a java script library.
+- it will make java script programming easy.
+- created in 2006.
+
+
+#jQuery Features
+Selector - it will help to select an html element and manipulate it.
+Animate - 
+CSS manipulation - 
+Ajax Method - jQuery have rich set of Ajax method for developing modern web application.
+Event method - jQuery have built-in event method.
+jQuery Traversing - jQuery provide DOM traversal method to locate descendants elements.
+Plugins - jQuery have many plugins such as create split pages, create slide show , create 
+          your own custom plugins.
+
+
+
+#JQuery Setup
+1. download and setup
+2. CDN for jQuery.
+
+
+#HelloWorld using jQuery
+
+
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+              document.write("Hello world using jQuery");
+        });
+    </script>
+
+</head>
+<body>
+    <h1> Hello</h1>
+</body>
+</html>
+
+
+
+#selector - id , class , element
+- $() 
+- element inside a parenthesis is element selector.
+- id inside a parenthesis is id selector.
+- class inside a parenthesis is class selector.
+
+
+
+$("h1")  - selector - element
+<h1> Welcome To jQuery </h1>
+
+
+$("pp")  - selector - id
+<h1 id="pp"> Welcome To jQuery </h1>
+
+
+$("dd")  - selector - class
+<h1 class="dd"> Welcome To jQuery </h1>
+
+
+
+
+
+
+
+
+
+
+//element selector
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+              $("button").click(function(){
+                $("div").hide();
+              });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <p>Welcome To User Interface manipulation using jQuery</p>
+    </div>
+    <button>Click Me</button>
+</body>
+</html>
+
+
+
+
+
+
+#hide an html element
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+              $("h1").click(function(){
+                $(this).hide();
+              });
+        });
+    </script>
+
+</head>
+<body>
+    <h1>Welcome To Fusion Middleware</h1>
+</body>
+</html>
+
+
+//id selector
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+              $("button").click(function(){
+                $("#ui").hide();
+              });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="ui">
+        <p>Welcome To User Interface manipulation using jQuery</p>
+    </div>
+    <button>Click Me</button>
+</body>
+</html>
+
+
+
+
+//class selector
+<!DOCTYPE html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function(){
+
+              $("button").click(function(){
+                $(".ui").hide();
+              });
+        });
+    </script>
+
+</head>
+<body>
+    <div class="ui">
+        <p>Welcome To User Interface manipulation using jQuery</p>
+    </div>
+    <button>Click Me</button>
+</body>
+</html>
+
+
+2429908@cognizant.com
+
+
+22nd July 2025
+What we have done last day ?
+done- Venigalla,Karthik,Upender,[Raghav],Abhishek,Murtaza,
+
+
+UI Side Update
+html5->css3->javascript->jQuery->bootstrap-> Angular -> React -> ...
+
+MiddleTier Update
+WebApplication(j2ee-servlet/jsp) 
+   Application Component-> WebService(soap/rest) ->   microservice  
+   (ifra)-> web server -> application server -> cloud   
+   (framework)-> Spring -> SpringBoot 
+
+
+#Project Artifact Review:
+
+
+#ADM - Application Development and Maintenance
+#Agile - Reporting Progress in Agile Projects 
+#Advanced GIT
+#Advanced Bootstrap
+
+TechDemo:-1
+Done - [Prasanth][Teja]Hari,Abhishek,Ajay,Himanshu,Fasi,
+       Upender,Teja,Raghu,Mohith,[Karthik],Prasanth,Abhinav
+
+
+GIT
+Bootstrap
+Agile values and Principle
+User Stories
+JavaScript
+JQuery
+
+handsOn - bootstrap(15) , GIT() , BRD() , 
+
+
+
+
+#ADM
+
+
+1. Need for Maintenance:
+
+Correcting Defects: Fixing bugs or issues discovered after software deployment.
+
+Adapting to Environment Changes: Modifying software to work with new operating systems, databases, browsers, or hardware.
+
+Enhancing Performance: Improving efficiency, response time, or optimizing resource usage.
+
+Adding New Features: Extending the software’s functionality based on evolving business needs.
+
+Ensuring Security: Updating software to protect against emerging security threats.
+
+Legal/Regulatory Compliance: Modifying software to comply with new regulations or standards.
+
+
+
+2. Challenges in Software Maintenance
+
+Understanding Legacy Code: Original developers may not be available, and documentation may be outdated.
+
+High Complexity: Interdependencies between modules can make changes risky.
+
+Limited Documentation: Incomplete or outdated documentation increases maintenance difficulty.
+
+Regression Risks: Fixing one issue can unintentionally introduce others.
+
+Resource Constraints: Limited budgets, skilled personnel, or tools for maintenance.
+
+Change Management: Ensuring version control and proper tracking of all changes.
+
+
+3. Categories of Software Maintenance
+
+Category	Description
+Corrective	Fixing defects or errors reported by users post-deployment.
+Adaptive	Modifying software to adapt to changes in environment.
+Perfective	Enhancing functionalities or performance based on user feedback.
+Preventive	Making changes to improve future maintainability and prevent potential problems.
+
+
+
+
+
+
+
+Reporting Progress in Agile Projects typically focuses on transparency, collaboration,
+ and value delivery over rigid documentation. Instead of traditional progress reports, Agile uses lightweight, iterative techniques. Here's an overview of how progress is reported in Agile projects:
+
+
+1. Daily Stand-ups (Daily Scrum)
+Frequency: Dail
+Purpose: Quick updates by each team member:
+What was done yesterday?
+What will be done today?
+Any blockers or impediments?
+
+2. Sprint Reviews
+Frequency: At the end of each sprint
+Purpose: Demonstrate completed work (potentially shippable product increment) to stakeholders for feedback.
+Outcome: Agreement on what’s complete, discussion on next priorities.
+
+3. Burndown Charts / Burnup Charts
+Burndown: Tracks remaining work over time.
+Burnup: Shows completed work towards total scope.
+Benefit: Visual, simple way to track sprint or release progress.
+
+4. Velocity Tracking
+Measures the amount of work (usually in story points) completed per sprint.
+Helps forecast future sprint capacity and release planning.
+
+5. Cumulative Flow Diagrams
+Visualizes the flow of work through stages (To Do, In Progress, Done).
+Identifies bottlenecks or work pile-ups.
+
+6. Sprint Goals Achievement
+Progress reported against pre-defined sprint goals, not just task completion.
+
+7. Product Backlog Refinement
+Continuous visibility of prioritized items.
+Reporting can focus on how backlog is evolving based on customer feedback and team capacity.
+
+
+8. Team Demos
+Short demos after completing significant features or increments, outside of formal sprint reviews.
+
+
+9. Agile Project Dashboards (Tool-Based Reporting)
+Tools like Jira, Azure DevOps, Rally, or Trello provide real-time dashboards.
+Common metrics:
+Number of stories completed
+Remaining backlog items
+Sprint progress
+Team capacity/utilization
+
+
+
+
+
+#WebApplication using Servlet/jsp  (J2EE)
+
+
+- 3 tier architecture
+
+- web server and application server
+
+- web component  and Application component
+
+     Web Component - simple web application using (servlet and jsp )
+                   
+
+     Application component - Enterprise level Application (springbc,adfbc,ejb)
+                                 - distributed
+                                 - persistence
+                                 - webservice
+                                 - transaction
+                                 - multi threading
+                                 - location transparency
+
+     Enterprise level Application - cloud - (springbc,adfbc,ejb)
+
+
+
+
+-  Application Server  = >    Cloud  
+
+
+
+#cloud
+
+#introduction:
+today  every one leverage this cloud computing.
+regardless of job role , industry need employees to do cloud computing.
+
+
+#what is cloud computing ?
+- to run car we need electricity , gas
+- to run a web application we need server to run.
+- to run our home we need power.
+- we don't create power grid ? we connect our home , car with the power grid and consume the power from the grid.  then we pay the bill at the end of the month.
+
+
+- How servers are related to cloud computing ?
+- same like power company , gcp , aws , azure they supply the resource , server  to the IT company.
+- we connect the internet to setup the servers and it resources. 
+
+
+- Cloud computing is the delivery of different services through the Internet, including data storage, servers, databases, networking, and software
+- cloud computing will give you compute resources based on the demand that you have.
+- based on the use of those cloud computing resources you are liable to pay the bill to the cloud provider.
+
+
+
+
+#Evaluation of cloud computing 
+- any org main their infostructure , they maintain the hardware , 
+above hardware they install os , and above os they  run the application.
+ like this way they main 3 diff server pro production , dev and testing.
+
+
+limitation  - as the applications are growing , as the need of the customer growing , they need 
+                  more servers and hardware infostructure.
+
+
+
+- this problem solved by Virtualization.  
+same hardware but they can create multiple VM above it using  Virtualization.
+- each virtual machine can be used as Dev , Prod or testing env or database instance etc.
+limitation - they have to maintain their own hardware , 24hr power supply , if more traffic they have to increase the hardware.
+
+
+- to resolve the problems cloud computing come into picture.
+- initially organization provide db server , as server as the resource provider.
+- like this way it company buy the server , db , storage from the cloud provider. when company don't need the same 
+  they simply delete the server or db or storage.
+- initially cloud provider supply very minimul services like linux server or windows server or db.
+
+
+- today cloud provider providing lots of services
+   like  - unlimited storage , compute , analytics , iot , ml etc
+- it company today can use these products just plugins and play. any where , any time and of any size.
+
+
+
+
+ servlet/jsp ->(framework)Spring,struts,jsf,adf,oaf -> SpringBoot
+                          
+
+- web application using servlet
+
+     client => login.html  =>  loginServlet.java  =>  DB 
+
+-  web application using jsp
+
+     client => login.html  =>  login.jsp  =>  DB 
+
+-  web application using  jsp + MVC(4)
+
+     client => login.html  =>  loginController.jsp  =>  LoginModel.java   =>  DB 
+                 v                  c                       m
+
+-   web application using  jsp + MVC + Enterprise Application  (with application server)
+
+      client => login.html  =>  loginController.jsp  =>  LoginModel.java(EJB/ADFBC)   =>  DB 
+                 v                  c                       m
+
+
+-   web application using  jsp + MVC + Enterprise Application  (no application server)
+
+      client => login.html  =>  loginController.jsp  =>  LoginModel.java(SpringBC)   =>  DB 
+                 v                  c                       m
+
+
+-   web application using  jsp + MVC + Enterprise Application  (no application server/production grade project)
+
+      client => login.html  =>  loginController.jsp  =>  LoginModel.java(SpringBoot)   =>  DB 
+                 v                  c                       m
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#WebService
+                           //3 Tire - Web Application Architecture  
+				     -  client , middle , eis   
+
+		          // Web Component and Application Component
+				    -  web component - simple web application
+				    -  application component - enterprise level application
+
+
+                                                // distributed -   It is  a features of Enterprise Level Application
+				-  remotely call some function                                                                            
+
+
+                                                 //Distributed Environment Communication :
+
+	                                  RMI  -    Remote  Method Invocation 
+			      -    support homogeneous communication
+
+				                    RMI
+			[Server1]        <==============>    [Server2]
+                                                              JAVA                    homo                       JAVA
+
+
+			                        RMI does not support
+			[Server1]        <==============>    [Server2]
+                                                              JAVA                    hetero                     .Net
+
+
+                                                       CORBA   -   Common Object Request Brocker Architecture
+                                                                       -   support homogeneous and Heterogeneous  communication
+                                                                       -   high complex 
+                                                                       -  implementation cost is high
+
+
+                                                                       JAVA IDL                           JAVA IDL
+                                                                  	jobj            CORBA        jobj 
+			[Server1]        <==============>    [Server2]
+                                                              JAVA                    homo                       JAVA
+
+
+
+                                                                        JAVA IDL                           .Net  IDL
+			                 jobj             CORBA         dobj
+			[Server1]        <==============>    [Server2]
+                                                              JAVA                    hetero                     .Net
+
+
+                                                     Web Service  -   We implement distributed env communication using web service.
+				    -   support homogeneous and Heterogeneous  communication
+				    -  multiple machine or server will communication using web service.
+				    -   we can implement vendor independent communication
+
+
+			                  => xml/json		              <=   xml/json				
+                                                                    jobj                                  Web service                             jobj 
+			[Server1]        <================================>    [Server2]
+                                                              JAVA                                                     homo-                       JAVA
+
+
+                                                                          => xml/json                                               <= xml/json
+			             jobj                                    Web Service                       dobj
+			[Server1]        <===============================>    [Server2]
+                                                              JAVA                                                   hetero-                     .Net
+
+
+
+
+#microservice
+Enterprise Architecture
+Definition  Of   Micro Service
+Buzz words About MS
+Why  Micro Service  ?
+Micro Service  Architecture
+Benefit  Of  Micro Service
+Key  Design Elements for Micro services
+
+
+
+
+
+
+
+
+
+
+
