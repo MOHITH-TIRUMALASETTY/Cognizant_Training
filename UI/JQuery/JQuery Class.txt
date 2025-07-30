@@ -1,0 +1,123 @@
+JQuery:
+	It is a java script library
+	It will make java script programming easy
+	Created in 2006
+
+
+JQuery Features:
+	Selector ---> It will help to select an html element and manupulate it
+	Animate
+	Css manupulation
+	Ajax method ---> JQuery have rich set of Ajax method for developing modren web application
+	Event method ---> JQuery have built in event method
+	JQuery Traversing ---> JQuery provive DOM traversal method to locate descedants elements
+	Plugins ---> JQuery have many plugins such as create split pages, create slide show, create your own custom plugins
+
+
+JQuery setup
+	Download and setup
+	CDN for JQuery ---> url method 
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+
+Hello world using JQuery:
+
+  
+Example :
+ 
+1.Element Selector:
+ 
+$(h1) -select -element
+<h1>welcome to jquery</h1>
+ 
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+</body>
+<script>
+
+        $(document).ready(function(){
+
+            $("button").click(function(){
+
+                $("div").hide();
+ 
+            });
+
+        });
+</script>
+ 
+    <div>
+<p> welcome to cloud native application using jQuery</p>
+</div>
+<button>Click Me</button>
+</html>
+
+
+
+2.Id Selector
+
+$("pp") -selector - id
+<h1 id="pp">welcome to jquery</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+</body>
+<script>
+
+        $(document).ready(function(){
+
+            $("button").click(function(){
+
+                $("#dd").hide();
+
+            });
+ 
+        });
+</script>
+<div id="dd">
+<p>Welcome to cloud native Application</p>
+</div>
+<button>Click Me</button>
+</html>
+ 
+ 
+3.Class selector
+
+$("dd") -selector - class
+<h1 class="dd">welcome to jquery</h1>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+</body>
+<script>
+
+        $(document).ready(function(){
+
+            $("button").click(function(){
+
+                $(".qq").hide();
+
+            });
+ 
+        });
+</script>
+<div class="qq">
+<p>Welcome to cloud native Application</p>
+</div>
+<button>Click Me</button>
+</html>
+ 
+	

@@ -1,0 +1,38 @@
+GIT:
+
+	It is a Distributed Version Control Tool
+	Linux GIT Created by Linux Torvalds created by Linux Torvalds
+ 	no single point of failure since all the dev have local repository.
+ 	check out and commit performed locally.
+ 	dev work space not required to connect to network
+ 	staging area (it is part of developer machine)
+ 		In git commit is 2 step process
+ 		first we have to commit in the staging area
+ 		then from staging area to local repository
+ 		staging area is a virtual area
+ 		we can double check any update before commit
+ 		it is not available in the other version of the VCS
+ 
+WS1 [Files]  ...commit---> [local repository] --commit--->[local GIT
+ 
+WS1[Files] --commit [Staging Area] repository)
+ 
+	git will take the snap shot of the data and then store it
+ 	criptographic conversion done in the staging area convert our data into hashing algo and encripted format
+ 	encription and decription is automatically take care of by git Branching and Merging
+
+
+Strp-1:
+	Create a GitHub Rep
+Step-2:
+	Download git
+Step-3:
+	go to git bash
+	Create local Rep
+	/>git init <repo name>
+	Create a clone rep
+	/>git clone <repo name>
+	Send file from local to global repo
+
+	git status
+
